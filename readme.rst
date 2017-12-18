@@ -57,6 +57,20 @@ Installation
 
   pip install --upgrade Opcodes
 
+Quick start and examples
+------------------------
+
+.. code-block:: python
+
+   from opcodes.x86_64 import read_instruction_set
+
+   # Print each AMD64 instruction name and summary.
+   for inst in read_instruction_set():
+       # See "opcodes/x86_64.py" Instruction and InstructionForm classes.
+       print("{name}: {summary}".format(name=inst.name, summary=inst.summary))
+
+See `examples <examples>`_ for more.
+
 Users
 -----
 
