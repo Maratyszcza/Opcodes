@@ -30,7 +30,7 @@ Current status
 
 The project provides descriptions for most user-mode x86, x86-64, and k1om instructions up to AVX-512 and SHA (including 3dnow!+, XOP, FMA3, FMA4, TBM and BMI2). The following instructions are currently **NOT** supported:
 
-- All priveledged instructions and user-mode system instructions (e.g. XSAVE, SLDT)
+- All privileged instructions and user-mode system instructions (e.g. XSAVE, SLDT)
 - Legacy string/streaming instructions (MOVS/SCAS/CMPS/STOS/LODS)
 - LOCK and REP/REPZ/REPNZ prefixes
 - x87 FPU instructions
