@@ -758,7 +758,7 @@ class Opcode:
         self.addend = None
 
     def __str__(self):
-        return "0x%02X".format(self.byte)
+        return "0x%02X" % self.byte
 
     def __repr__(self):
         return str(self)
