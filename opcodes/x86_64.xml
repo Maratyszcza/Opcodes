@@ -25616,6 +25616,144 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="VCVTNE2PS2BF16" summary="Convert with Nearest-Even rounding 2 Single-Precision FP vectors into BFloat16 FP vector">
+    <InstructionForm gas-name="vcvtne2ps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="11" LL="00" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#2" aaa="#0" z="#0" disp8xN="16"/>
+        <Opcode byte="72"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtne2ps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="11" LL="00" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="72"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtne2ps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="11" LL="01" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#2" aaa="#0" z="#0" disp8xN="32"/>
+        <Opcode byte="72"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtne2ps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="11" LL="01" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="72"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtne2ps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="11" LL="10" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#2" aaa="#0" z="#0" disp8xN="64"/>
+        <Opcode byte="72"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtne2ps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="11" LL="10" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="72"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VCVTNEPS2BF16" summary="Convert with Nearest-Even rounding a Single-Precision FP vector into a BFloat16 FP vector">
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="m128/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#0" B="#1" X="#1" b="#1" aaa="#0" z="#0" disp8xN="16"/>
+        <Opcode byte="72"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="m256/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#0" B="#1" X="#1" b="#1" aaa="#0" z="#0" disp8xN="32"/>
+        <Opcode byte="72"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="m512/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#0" B="#1" X="#1" b="#1" aaa="#0" z="#0" disp8xN="64"/>
+        <Opcode byte="72"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#0" B="#1" X="#1" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="72"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#0" B="#1" X="#1" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="72"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#0" B="#1" X="#1" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="72"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="VCVTPD2DQ" summary="Convert Packed Double-Precision FP Values to Packed Dword Integers">
     <InstructionForm gas-name="vcvtpd2dq" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
@@ -28987,6 +29125,78 @@
       <Encoding>
         <EVEX mm="01" pp="10" LL="#3" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#3" aaa="#0" z="#0"/>
         <Opcode byte="5E"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VDPBF16PS" summary="Packed Dot Product of BFloat16 FP subvectors into Single-Precision FP values">
+    <InstructionForm gas-name="vdpbf16ps" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="00" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#2" aaa="#0" z="#0" disp8xN="16"/>
+        <Opcode byte="52"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vdpbf16ps" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="00" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="52"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vdpbf16ps" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm{k}{z}" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="01" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#2" aaa="#0" z="#0" disp8xN="32"/>
+        <Opcode byte="52"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vdpbf16ps" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm{k}{z}" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="01" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="52"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vdpbf16ps" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <Operand type="zmm{k}{z}" input="true" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="10" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#2" aaa="#0" z="#0" disp8xN="64"/>
+        <Opcode byte="52"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vdpbf16ps" xmm-mode="AVX">
+      <ISA id="AVX512BF16"/>
+      <Operand type="zmm{k}{z}" input="true" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="10" LL="10" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="52"/>
         <ModRM mode="11" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
@@ -48781,6 +48991,78 @@
       <Encoding>
         <EVEX mm="10" pp="01" LL="10" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
         <Opcode byte="52"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPWSSDS" summary="Packed Dot Product of Signed-by-Signed Word subvectors into Doubleword with Saturation">
+    <InstructionForm gas-name="vpdpwssds" xmm-mode="AVX">
+      <ISA id="AVX512VNNI"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#2" aaa="#0" z="#0" disp8xN="16"/>
+        <Opcode byte="53"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwssds" xmm-mode="AVX">
+      <ISA id="AVX512VNNI"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="53"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwssds" xmm-mode="AVX">
+      <ISA id="AVX512VNNI"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm{k}{z}" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#2" aaa="#0" z="#0" disp8xN="32"/>
+        <Opcode byte="53"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwssds" xmm-mode="AVX">
+      <ISA id="AVX512VNNI"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm{k}{z}" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="53"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwssds" xmm-mode="AVX">
+      <ISA id="AVX512VNNI"/>
+      <Operand type="zmm{k}{z}" input="true" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512/m32bcst" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="#2" aaa="#0" z="#0" disp8xN="64"/>
+        <Opcode byte="53"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwssds" xmm-mode="AVX">
+      <ISA id="AVX512VNNI"/>
+      <Operand type="zmm{k}{z}" input="true" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="0" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="53"/>
         <ModRM mode="11" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>

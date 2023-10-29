@@ -456,6 +456,7 @@
 			<xs:enumeration value="AVX512IFMA" />
 			<xs:enumeration value="AVX512VPOPCNTDQ" />
 			<xs:enumeration value="AVX512BITALG" />
+			<xs:enumeration value="AVX512BF16" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="InstructionSet">
