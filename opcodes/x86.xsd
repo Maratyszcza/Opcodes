@@ -361,6 +361,7 @@
 			<xs:enumeration value="SSE4A" />
 			<xs:enumeration value="AVX" />
 			<xs:enumeration value="AVX2" />
+			<xs:enumeration value="AVX2VNNI" />
 			<xs:enumeration value="XOP" />
 			<xs:enumeration value="FMA3" />
 			<xs:enumeration value="FMA4" />
