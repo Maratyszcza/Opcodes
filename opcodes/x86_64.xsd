@@ -425,6 +425,7 @@
 			<xs:enumeration value="PCLMULQDQ" />
 			<xs:enumeration value="VPCLMULQDQ" />
 			<xs:enumeration value="AES" />
+			<xs:enumeration value="VAES" />
 			<xs:enumeration value="SHA" />
 			<xs:enumeration value="RDRAND" />
 			<xs:enumeration value="RDSEED" />

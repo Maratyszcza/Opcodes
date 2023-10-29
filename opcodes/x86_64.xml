@@ -23233,8 +23233,8 @@
   </Instruction>
   <Instruction name="VAESDEC" summary="Perform One Round of an AES Decryption Flow">
     <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
-      <ISA id="AVX"/>
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -23245,8 +23245,20 @@
       </Encoding>
     </InstructionForm>
     <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
-      <ISA id="AVX"/>
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DE"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
@@ -23256,11 +23268,93 @@
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
+    <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="16"/>
+        <Opcode byte="DE"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00010" pp="01" R="#0" B="#2" vvvv="#1"/>
+        <Opcode byte="DE"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DE"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00010" pp="01" R="#0" B="#2" X="#2" vvvv="#1"/>
+        <Opcode byte="DE"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="32"/>
+        <Opcode byte="DE"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DE"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdec" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="64"/>
+        <Opcode byte="DE"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
   </Instruction>
   <Instruction name="VAESDECLAST" summary="Perform Last Round of an AES Decryption Flow">
     <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
-      <ISA id="AVX"/>
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -23271,13 +23365,107 @@
       </Encoding>
     </InstructionForm>
     <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
-      <ISA id="AVX"/>
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
       <Encoding>
         <VEX type="VEX" L="0" m-mmmm="00010" pp="01" R="#0" B="#2" X="#2" vvvv="#1"/>
+        <Opcode byte="DF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="16"/>
+        <Opcode byte="DF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00010" pp="01" R="#0" B="#2" vvvv="#1"/>
+        <Opcode byte="DF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00010" pp="01" R="#0" B="#2" X="#2" vvvv="#1"/>
+        <Opcode byte="DF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="32"/>
+        <Opcode byte="DF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesdeclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="64"/>
         <Opcode byte="DF"/>
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
@@ -23285,8 +23473,8 @@
   </Instruction>
   <Instruction name="VAESENC" summary="Perform One Round of an AES Encryption Flow">
     <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
-      <ISA id="AVX"/>
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -23297,8 +23485,20 @@
       </Encoding>
     </InstructionForm>
     <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
-      <ISA id="AVX"/>
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DC"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
@@ -23308,11 +23508,93 @@
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
+    <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="16"/>
+        <Opcode byte="DC"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00010" pp="01" R="#0" B="#2" vvvv="#1"/>
+        <Opcode byte="DC"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DC"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00010" pp="01" R="#0" B="#2" X="#2" vvvv="#1"/>
+        <Opcode byte="DC"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="32"/>
+        <Opcode byte="DC"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DC"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenc" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="64"/>
+        <Opcode byte="DC"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
   </Instruction>
   <Instruction name="VAESENCLAST" summary="Perform Last Round of an AES Encryption Flow">
     <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
-      <ISA id="AVX"/>
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -23323,8 +23605,20 @@
       </Encoding>
     </InstructionForm>
     <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
-      <ISA id="AVX"/>
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DD"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
@@ -23334,11 +23628,93 @@
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
+    <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="16"/>
+        <Opcode byte="DD"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00010" pp="01" R="#0" B="#2" vvvv="#1"/>
+        <Opcode byte="DD"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DD"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00010" pp="01" R="#0" B="#2" X="#2" vvvv="#1"/>
+        <Opcode byte="DD"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="32"/>
+        <Opcode byte="DD"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="DD"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vaesenclast" xmm-mode="AVX">
+      <ISA id="VAES"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="64"/>
+        <Opcode byte="DD"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
   </Instruction>
   <Instruction name="VAESIMC" summary="Perform the AES InvMixColumn Transformation">
     <InstructionForm gas-name="vaesimc" xmm-mode="AVX">
-      <ISA id="AVX"/>
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
@@ -23348,8 +23724,8 @@
       </Encoding>
     </InstructionForm>
     <InstructionForm gas-name="vaesimc" xmm-mode="AVX">
-      <ISA id="AVX"/>
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m128" input="true" output="false"/>
       <Encoding>
@@ -23361,8 +23737,8 @@
   </Instruction>
   <Instruction name="VAESKEYGENASSIST" summary="AES Round Key Generation Assist">
     <InstructionForm gas-name="vaeskeygenassist" xmm-mode="AVX">
-      <ISA id="AVX"/>
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="imm8"/>
@@ -23374,8 +23750,8 @@
       </Encoding>
     </InstructionForm>
     <InstructionForm gas-name="vaeskeygenassist" xmm-mode="AVX">
-      <ISA id="AVX"/>
       <ISA id="AES"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m128" input="true" output="false"/>
       <Operand type="imm8"/>
