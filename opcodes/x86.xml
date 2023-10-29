@@ -53094,6 +53094,28 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="VPOPCNTB" summary="Packed Population Count for Byte Integers">
+    <InstructionForm gas-name="vpopcntb" xmm-mode="AVX">
+      <ISA id="AVX512BITALG"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="54"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpopcntb" xmm-mode="AVX">
+      <ISA id="AVX512BITALG"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="m512" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <Opcode byte="54"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="VPOPCNTD" summary="Packed Population Count for Doubleword Integers">
     <InstructionForm gas-name="vpopcntd" xmm-mode="AVX">
       <ISA id="AVX512VPOPCNTDQ"/>
@@ -53135,6 +53157,28 @@
         <EVEX mm="10" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
         <Opcode byte="55"/>
         <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPOPCNTW" summary="Packed Population Count for Word Integers">
+    <InstructionForm gas-name="vpopcntw" xmm-mode="AVX">
+      <ISA id="AVX512BITALG"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="54"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpopcntw" xmm-mode="AVX">
+      <ISA id="AVX512BITALG"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="m512" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <Opcode byte="54"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
@@ -54915,6 +54959,30 @@
       <Encoding>
         <VEX type="VEX" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
         <Opcode byte="00"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPSHUFBITQMB" summary="Shuffle Bits From Quadword Elements Using Byte Indexes Into Mask">
+    <InstructionForm gas-name="vpshufbitqmb" xmm-mode="AVX">
+      <ISA id="AVX512BITALG"/>
+      <Operand type="k{k}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="0"/>
+        <Opcode byte="8F"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpshufbitqmb" xmm-mode="AVX">
+      <ISA id="AVX512BITALG"/>
+      <Operand type="k{k}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="0" disp8xN="64"/>
+        <Opcode byte="8F"/>
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
