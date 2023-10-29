@@ -423,6 +423,7 @@
 			<xs:enumeration value="FMA4" />
 			<xs:enumeration value="F16C" />
 			<xs:enumeration value="PCLMULQDQ" />
+			<xs:enumeration value="VPCLMULQDQ" />
 			<xs:enumeration value="AES" />
 			<xs:enumeration value="SHA" />
 			<xs:enumeration value="RDRAND" />

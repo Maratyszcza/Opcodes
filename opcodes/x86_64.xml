@@ -46319,8 +46319,8 @@
   </Instruction>
   <Instruction name="VPCLMULQDQ" summary="Carry-Less Quadword Multiplication">
     <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
-      <ISA id="AVX"/>
       <ISA id="PCLMULQDQ"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -46333,14 +46333,124 @@
       </Encoding>
     </InstructionForm>
     <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
-      <ISA id="AVX"/>
+      <ISA id="VPCLMULQDQ"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="44"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
       <ISA id="PCLMULQDQ"/>
+      <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
         <VEX type="VEX" L="0" m-mmmm="00011" pp="01" R="#0" B="#2" X="#2" vvvv="#1"/>
+        <Opcode byte="44"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
+      <ISA id="VPCLMULQDQ"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="00" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="16"/>
+        <Opcode byte="44"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
+      <ISA id="VPCLMULQDQ"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00011" pp="01" R="#0" B="#2" vvvv="#1"/>
+        <Opcode byte="44"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
+      <ISA id="VPCLMULQDQ"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="44"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
+      <ISA id="VPCLMULQDQ"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" L="1" m-mmmm="00011" pp="01" R="#0" B="#2" X="#2" vvvv="#1"/>
+        <Opcode byte="44"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
+      <ISA id="VPCLMULQDQ"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="01" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="32"/>
+        <Opcode byte="44"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
+      <ISA id="VPCLMULQDQ"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0"/>
+        <Opcode byte="44"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpclmulqdq" xmm-mode="AVX">
+      <ISA id="VPCLMULQDQ"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="10" vvvv="#1" V="#1" RR="#0" B="#2" X="#2" b="0" aaa="000" z="0" disp8xN="64"/>
         <Opcode byte="44"/>
         <ModRM mode="#2" reg="#0" rm="#2"/>
         <Immediate size="1" value="#3"/>
