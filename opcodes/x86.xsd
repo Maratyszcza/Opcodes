@@ -393,6 +393,7 @@
 			<xs:enumeration value="AVX512PF" />
 			<xs:enumeration value="AVX512ER" />
 			<xs:enumeration value="AVX512CD" />
+			<xs:enumeration value="AVX512VNNI" />
 			<xs:enumeration value="AVX512VBMI" />
 			<xs:enumeration value="AVX512VBMI2" />
 			<xs:enumeration value="AVX512IFMA" />
