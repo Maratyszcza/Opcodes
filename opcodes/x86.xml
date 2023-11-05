@@ -4974,6 +4974,92 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="GF2P8AFFINEINVQB" summary="Galois Field (2^8) Affine Inverse Transformation">
+    <InstructionForm gas-name="gf2p8affineinvqb" xmm-mode="SSE">
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <Prefix byte="66" mandatory="true"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="3A"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+        <Immediate size="1" value="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="gf2p8affineinvqb" xmm-mode="SSE">
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <Prefix byte="66" mandatory="true"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="3A"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+        <Immediate size="1" value="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="GF2P8AFFINEQB" summary="Galois Field (2^8) Affine Transformation">
+    <InstructionForm gas-name="gf2p8affineqb" xmm-mode="SSE">
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <Prefix byte="66" mandatory="true"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="3A"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+        <Immediate size="1" value="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="gf2p8affineqb" xmm-mode="SSE">
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <Prefix byte="66" mandatory="true"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="3A"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+        <Immediate size="1" value="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="GF2P8MULB" summary="Galois Field Multiply Bytes">
+    <InstructionForm gas-name="gf2p8mulb" xmm-mode="SSE">
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="66" mandatory="true"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="gf2p8mulb" xmm-mode="SSE">
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="66" mandatory="true"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="HADDPD" summary="Packed Double-FP Horizontal Add">
     <InstructionForm gas-name="haddpd" xmm-mode="SSE">
       <ISA id="SSE3"/>
@@ -33331,6 +33417,412 @@
         <Opcode byte="27"/>
         <ModRM mode="11" reg="#0" rm="#2"/>
         <Immediate size="1" value="#4"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VGF2P8AFFINEINVQB" summary="Galois Field (2^8) Affine Inverse Transformation">
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128/m64bcst" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="00" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="#0" z="#0" disp8xN="16"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="00" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256/m64bcst" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="01" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="#0" z="#0" disp8xN="32"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX512VL"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="01" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512/m64bcst" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="10" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="#0" z="#0" disp8xN="64"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX512F"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="10" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00011" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00011" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="1" m-mmmm="00011" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineinvqb" xmm-mode="AVX">
+      <ISA id="GFNI"/>
+      <ISA id="AVX"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="1" m-mmmm="00011" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VGF2P8AFFINEQB" summary="Galois Field (2^8) Affine Transformation">
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX512VL"/>
+      <ISA id="GFNI"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128/m64bcst" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="00" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="#0" z="#0" disp8xN="16"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX512VL"/>
+      <ISA id="GFNI"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="00" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX512VL"/>
+      <ISA id="GFNI"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256/m64bcst" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="01" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="#0" z="#0" disp8xN="32"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX512VL"/>
+      <ISA id="GFNI"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="01" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX512F"/>
+      <ISA id="GFNI"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512/m64bcst" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="10" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="#0" z="#0" disp8xN="64"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX512F"/>
+      <ISA id="GFNI"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <EVEX mm="11" pp="01" LL="10" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX"/>
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00011" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX"/>
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00011" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX"/>
+      <ISA id="GFNI"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="1" m-mmmm="00011" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8affineqb" xmm-mode="AVX">
+      <ISA id="AVX"/>
+      <ISA id="GFNI"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Operand type="imm8"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="1" m-mmmm="00011" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CE"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+        <Immediate size="1" value="#3"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VGF2P8MULB" summary="Galois Field Multiply Bytes">
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX512VL"/>
+      <ISA id="GFNI"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX512VL"/>
+      <ISA id="GFNI"/>
+      <Operand type="xmm{k}{z}" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="00" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX512VL"/>
+      <ISA id="GFNI"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX512VL"/>
+      <ISA id="GFNI"/>
+      <Operand type="ymm{k}{z}" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="01" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX512F"/>
+      <ISA id="GFNI"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX512F"/>
+      <ISA id="GFNI"/>
+      <Operand type="zmm{k}{z}" input="false" output="true"/>
+      <Operand type="zmm" input="true" output="false"/>
+      <Operand type="m512" input="true" output="false"/>
+      <Encoding>
+        <EVEX mm="10" pp="01" LL="10" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX"/>
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX"/>
+      <ISA id="GFNI"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX"/>
+      <ISA id="GFNI"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vgf2p8mulb" xmm-mode="AVX">
+      <ISA id="AVX"/>
+      <ISA id="GFNI"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="CF"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
