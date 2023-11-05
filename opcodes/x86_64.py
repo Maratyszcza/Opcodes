@@ -733,17 +733,17 @@ class EVEX:
     Encoding may have only one EVEX prefix and if present, it immediately precedes the opcode, and no other prefix is \
     allowed.
 
-    :ivar mm: the EVEX mm (compressed legacy escape) field. Identical to two low bits of VEX.m-mmmm field. Possible \
-    values are:
+    :ivar mmm: the EVEX mmm (decoding map) field. When the top bit is zero, the two low bits of this field are \
+    identical to the two low bits of VEX.m-mmmm field. Possible values are:
 
-        0b01
-            Implies 0x0F leading opcode byte.
+        0b001
+            Decoding map 1. Implies 0x0F leading opcode byte.
 
-        0b10
-            Implies 0x0F 0x38 leading opcode bytes.
+        0b010
+            Decoding map 2. Implies 0x0F 0x38 leading opcode bytes.
 
-        0b11
-            Implies 0x0F 0x3A leading opcode bytes.
+        0b011
+            Decoding map 3. Implies 0x0F 0x3A leading opcode bytes.
 
     :ivar pp: the EVEX pp (compressed legacy prefix) field. Possible values are:
 
@@ -845,7 +845,7 @@ class EVEX:
     """
 
     def __init__(self):
-        self.mm = None
+        self.mmm = None
         self.pp = None
         self.W = None
         self.LL = None
@@ -1112,7 +1112,7 @@ def read_instruction_set(filename=None):
                     elif xml_component.tag == "EVEX":
                         evex = EVEX()
                         evex.pp = int(xml_component.attrib["pp"], 2)
-                        evex.mm = int(xml_component.attrib["mm"], 2)
+                        evex.mmm = int(xml_component.attrib["mmm"], 2)
                         evex.W = _parse_value(xml_component.attrib.get("W"), [], 2)
                         evex.LL = _parse_value(xml_component.attrib.get("LL"), instruction_form.operands, 2)
                         evex.vvvv = _parse_value(xml_component.attrib["vvvv"], instruction_form.operands, 2)

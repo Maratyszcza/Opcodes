@@ -178,11 +178,11 @@
 			<xs:enumeration value="#2" />
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="EVEX.mm">
+	<xs:simpleType name="EVEX.mmm">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="01" />
-			<xs:enumeration value="10" />
-			<xs:enumeration value="11" />
+			<xs:enumeration value="001" />
+			<xs:enumeration value="010" />
+			<xs:enumeration value="011" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EVEX.pp">
@@ -459,7 +459,7 @@
 													</xs:element>
 													<xs:element name="EVEX" minOccurs="0">
 														<xs:complexType>
-															<xs:attribute name="mm" type="EVEX.mm" use="required" />
+															<xs:attribute name="mmm" type="EVEX.mmm" use="required" />
 															<xs:attribute name="pp" type="EVEX.pp" use="required" />
 															<xs:attribute name="W" type="EVEX.W" />
 															<xs:attribute name="LL" type="EVEX.LL" />
