@@ -39,6 +39,7 @@
 			<xs:enumeration value="m" />
 			<xs:enumeration value="m8" />
 			<xs:enumeration value="m16" />
+			<xs:enumeration value="m16{k}" />
 			<xs:enumeration value="m16{k}{z}" />
 			<xs:enumeration value="m32" />
 			<xs:enumeration value="m32{k}" />
@@ -55,6 +56,11 @@
 			<xs:enumeration value="m512" />
 			<xs:enumeration value="m512{k}" />
 			<xs:enumeration value="m512{k}{z}" />
+			<xs:enumeration value="m32/m16bcst" />
+			<xs:enumeration value="m64/m16bcst" />
+			<xs:enumeration value="m128/m16bcst" />
+			<xs:enumeration value="m256/m16bcst" />
+			<xs:enumeration value="m512/m16bcst" />
 			<xs:enumeration value="m64/m32bcst" />
 			<xs:enumeration value="m128/m32bcst" />
 			<xs:enumeration value="m256/m32bcst" />
@@ -233,6 +239,8 @@
 			<xs:enumeration value="001" />
 			<xs:enumeration value="010" />
 			<xs:enumeration value="011" />
+			<xs:enumeration value="101" />
+			<xs:enumeration value="110" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EVEX.pp">
@@ -461,6 +469,7 @@
 			<xs:enumeration value="AVX512VPOPCNTDQ" />
 			<xs:enumeration value="AVX512BITALG" />
 			<xs:enumeration value="AVX512BF16" />
+			<xs:enumeration value="AVX512FP16" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="InstructionSet">
