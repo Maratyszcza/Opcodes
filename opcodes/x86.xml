@@ -22,6 +22,19 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="AADD" summary="Atomically ADD">
+    <InstructionForm gas-name="aadd">
+      <ISA id="RAO-INT"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="AAM" summary="ASCII Adjust AX After Multiply">
     <InstructionForm gas-name="aam" go-name="AAM">
       <Encoding>
@@ -34,6 +47,20 @@
       <Encoding>
         <Opcode byte="D4"/>
         <Immediate size="1" value="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="AAND" summary="Atomically AND">
+    <InstructionForm gas-name="aand">
+      <ISA id="RAO-INT"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="66" mandatory="true"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
@@ -1138,6 +1165,34 @@
         <Opcode byte="0F"/>
         <Opcode byte="54"/>
         <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="AOR" summary="Atomically OR">
+    <InstructionForm gas-name="aor">
+      <ISA id="RAO-INT"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="F2" mandatory="true"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="AXOR" summary="Atomically XOR">
+    <InstructionForm gas-name="axor">
+      <ISA id="RAO-INT"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="F3" mandatory="true"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
     </InstructionForm>
   </Instruction>

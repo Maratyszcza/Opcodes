@@ -1,5 +1,59 @@
 <?xml version='1.0' encoding='utf-8'?>
 <InstructionSet name="x86-64">
+  <Instruction name="AADD" summary="Atomically Add">
+    <InstructionForm gas-name="aadd">
+      <ISA id="RAO-INT"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <REX mandatory="false" W="0" R="#1" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="aadd">
+      <ISA id="RAO-INT"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <REX mandatory="true" W="1" R="#1" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="AAND" summary="Atomically AND">
+    <InstructionForm gas-name="aand">
+      <ISA id="RAO-INT"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="66" mandatory="true"/>
+        <REX mandatory="false" W="0" R="#1" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="aand">
+      <ISA id="RAO-INT"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="66" mandatory="true"/>
+        <REX mandatory="true" W="1" R="#1" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="ADC" summary="Add with Carry">
     <InstructionForm gas-name="adcb" go-name="ADCB" nacl-version="33">
       <Operand type="al" input="true" output="true"/>
@@ -1513,6 +1567,62 @@
         <Opcode byte="0F"/>
         <Opcode byte="54"/>
         <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="AOR" summary="Atomically OR">
+    <InstructionForm gas-name="aor">
+      <ISA id="RAO-INT"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="F2" mandatory="true"/>
+        <REX mandatory="false" W="0" R="#1" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="aor">
+      <ISA id="RAO-INT"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="F2" mandatory="true"/>
+        <REX mandatory="true" W="1" R="#1" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="AXOR" summary="Atomically XOR">
+    <InstructionForm gas-name="axor">
+      <ISA id="RAO-INT"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="F3" mandatory="true"/>
+        <REX mandatory="false" W="0" R="#1" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="axor">
+      <ISA id="RAO-INT"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <Prefix byte="F3" mandatory="true"/>
+        <REX mandatory="true" W="1" R="#1" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="38"/>
+        <Opcode byte="FC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
