@@ -32,10 +32,12 @@
 			<xs:enumeration value="zmm" />
 			<xs:enumeration value="zmm{k}" />
 			<xs:enumeration value="zmm{k}{z}" />
+			<xs:enumeration value="tmm" />
 			<xs:enumeration value="k" />
 			<xs:enumeration value="k{k}" />
 			<xs:enumeration value="moffs32" />
 			<xs:enumeration value="moffs64" />
+			<xs:enumeration value="sibmem" />
 			<xs:enumeration value="m" />
 			<xs:enumeration value="m8" />
 			<xs:enumeration value="m16" />
@@ -369,6 +371,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="ModRM.rm">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="0" />
 			<xs:enumeration value="#0" />
 			<xs:enumeration value="#1" />
 			<xs:enumeration value="#2" />
@@ -470,6 +473,10 @@
 			<xs:enumeration value="AVX512BITALG" />
 			<xs:enumeration value="AVX512BF16" />
 			<xs:enumeration value="AVX512FP16" />
+			<xs:enumeration value="AMX-TILE" />
+			<xs:enumeration value="AMX-BF16" />
+			<xs:enumeration value="AMX-FP16" />
+			<xs:enumeration value="AMX-INT8" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="InstructionSet">

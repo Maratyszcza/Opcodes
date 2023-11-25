@@ -1133,7 +1133,7 @@ def read_instruction_set(filename=None):
                         modrm = ModRM()
                         modrm.mode = _parse_value(xml_component.attrib.get("mode"), instruction_form.operands, 2)
                         modrm.reg = _parse_value(xml_component.attrib.get("reg"), instruction_form.operands, 10)
-                        modrm.rm = _parse_value(xml_component.attrib.get("rm"), instruction_form.operands)
+                        modrm.rm = _parse_value(xml_component.attrib.get("rm"), instruction_form.operands, 10)
                         encoding.components.append(modrm)
                     elif xml_component.tag == "Immediate":
                         assert "size" in xml_component.attrib
