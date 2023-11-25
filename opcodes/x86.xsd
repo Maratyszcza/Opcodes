@@ -369,7 +369,7 @@
 			<xs:enumeration value="SSE4A" />
 			<xs:enumeration value="AVX" />
 			<xs:enumeration value="AVX2" />
-			<xs:enumeration value="AVX2VNNI" />
+			<xs:enumeration value="AVX-VNNI" />
 			<xs:enumeration value="XOP" />
 			<xs:enumeration value="FMA3" />
 			<xs:enumeration value="FMA4" />
@@ -398,21 +398,21 @@
 			<xs:enumeration value="PREFETCHWT1" />
 			<xs:enumeration value="MONITOR" />
 			<xs:enumeration value="MONITORX" />
-			<xs:enumeration value="AVX512F" />
 			<xs:enumeration value="AVX512BW" />
-			<xs:enumeration value="AVX512DQ" />
-			<xs:enumeration value="AVX512VL" />
-			<xs:enumeration value="AVX512PF" />
-			<xs:enumeration value="AVX512ER" />
 			<xs:enumeration value="AVX512CD" />
-			<xs:enumeration value="AVX512VNNI" />
-			<xs:enumeration value="AVX512VBMI" />
-			<xs:enumeration value="AVX512VBMI2" />
-			<xs:enumeration value="AVX512IFMA" />
-			<xs:enumeration value="AVX512VPOPCNTDQ" />
-			<xs:enumeration value="AVX512BITALG" />
-			<xs:enumeration value="AVX512BF16" />
-			<xs:enumeration value="AVX512FP16" />
+			<xs:enumeration value="AVX512DQ" />
+			<xs:enumeration value="AVX512ER" />
+			<xs:enumeration value="AVX512F" />
+			<xs:enumeration value="AVX512PF" />
+			<xs:enumeration value="AVX512VL" />
+			<xs:enumeration value="AVX512-BF16" />
+			<xs:enumeration value="AVX512-BITALG" />
+			<xs:enumeration value="AVX512-FP16" />
+			<xs:enumeration value="AVX512-IFMA" />
+			<xs:enumeration value="AVX512-VBMI" />
+			<xs:enumeration value="AVX512-VBMI2" />
+			<xs:enumeration value="AVX512-VNNI" />
+			<xs:enumeration value="AVX512-VPOPCNTDQ" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="InstructionSet">
