@@ -158,7 +158,7 @@ class Operand:
             A 128-bit XMM SIMD register (xmm0-xmm31), optionally merge-masked by an AVX-512 mask register (k1-k7).
 
         "xmm{k}{z}"
-            A 128-bit XMM SIMD register (xmm0-xmm31), optionally masked by an AVX-512 mask register (k1-k7).
+            A 128-bit XMM SIMD register (xmm0-xmm31), optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "ymm"
             A 256-bit YMM SIMD register (ymm0-ymm31).
@@ -167,7 +167,7 @@ class Operand:
             A 256-bit YMM SIMD register (ymm0-ymm31), optionally merge-masked by an AVX-512 mask register (k1-k7).
 
         "ymm{k}{z}"
-            A 256-bit YMM SIMD register (ymm0-ymm31), optionally masked by an AVX-512 mask register (k1-k7).
+            A 256-bit YMM SIMD register (ymm0-ymm31), optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "zmm"
             A 512-bit ZMM SIMD register (zmm0-zmm31).
@@ -176,7 +176,7 @@ class Operand:
             A 512-bit ZMM SIMD register (zmm0-zmm31), optionally merge-masked by an AVX-512 mask register (k1-k7).
 
         "zmm{k}{z}"
-            A 512-bit ZMM SIMD register (zmm0-zmm31), optionally masked by an AVX-512 mask register (k1-k7).
+            A 512-bit ZMM SIMD register (zmm0-zmm31), optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "k"
             An AVX-512 mask register (k0-k7).
@@ -193,8 +193,11 @@ class Operand:
         "m16"
             A 16-bit memory operand.
 
+        "m16{k}"
+            A 16-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
+
         "m16{k}{z}"
-            A 16-bit memory operand, optionally masked by an AVX-512 mask register (k1-k7).
+            A 16-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "m32"
             A 32-bit memory operand.
@@ -203,7 +206,7 @@ class Operand:
             A 32-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
 
         "m32{k}{z}"
-            A 32-bit memory operand, optionally masked by an AVX-512 mask register (k1-k7).
+            A 32-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "m64"
             A 64-bit memory operand.
@@ -212,7 +215,7 @@ class Operand:
             A 64-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
 
         "m64{k}{z}"
-            A 64-bit memory operand, optionally masked by an AVX-512 mask register (k1-k7).
+            A 64-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "m80"
             An 80-bit memory operand.
@@ -220,38 +223,62 @@ class Operand:
         "m128"
             A 128-bit memory operand.
 
+        "m128{k}"
+            A 128-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
+
         "m128{k}{z}"
-            A 128-bit memory operand, optionally masked by an AVX-512 mask register (k1-k7).
+            A 128-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "m256"
             A 256-bit memory operand.
 
+        "m256{k}"
+            A 256-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
+
         "m256{k}{z}"
-            A 256-bit memory operand, optionally masked by an AVX-512 mask register (k1-k7).
+            A 256-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "m512"
             A 512-bit memory operand.
 
-        "m512{k}{z}"
+        "m512{k}"
             A 512-bit memory operand, optionally masked by an AVX-512 mask register (k1-k7).
+
+        "m512{k}{z}"
+            A 512-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
+
+        "m32/m16bcst"
+            A 32-bit memory operand or a 16-bit memory operand broadcasted to 32 bits {1to2}.
+
+        "m64/m16bcst"
+            A 64-bit memory operand or a 16-bit memory operand broadcasted to 64 bits {1to4}.
 
         "m64/m32bcst"
             A 64-bit memory operand or a 32-bit memory operand broadcasted to 64 bits {1to2}.
 
+        "m128/m16bcst"
+            A 128-bit memory operand or a 16-bit memory operand broadcasted to 128 bits {1to8}.
+
         "m128/m32bcst"
             A 128-bit memory operand or a 32-bit memory operand broadcasted to 128 bits {1to4}.
-
-        "m256/m32bcst"
-            A 256-bit memory operand or a 32-bit memory operand broadcasted to 256 bits {1to8}.
-
-        "m512/m32bcst"
-            A 512-bit memory operand or a 32-bit memory operand broadcasted to 512 bits {1to16}.
 
         "m128/m64bcst"
             A 128-bit memory operand or a 64-bit memory operand broadcasted to 128 bits {1to2}.
 
+        "m256/m16bcst"
+            A 256-bit memory operand or a 16-bit memory operand broadcasted to 256 bits {1to16}.
+
+        "m256/m32bcst"
+            A 256-bit memory operand or a 32-bit memory operand broadcasted to 256 bits {1to8}.
+
         "m256/m64bcst"
             A 256-bit memory operand or a 64-bit memory operand broadcasted to 256 bits {1to4}.
+
+        "m512/m16bcst"
+            A 512-bit memory operand or a 16-bit memory operand broadcasted to 512 bits {1to32}.
+
+        "m512/m32bcst"
+            A 512-bit memory operand or a 32-bit memory operand broadcasted to 512 bits {1to16}.
 
         "m512/m64bcst"
             A 512-bit memory operand or a 64-bit memory operand broadcasted to 512 bits {1to8}.
@@ -353,108 +380,143 @@ class Operand:
 
 class ISAExtension:
     _score_map = {
-        "CPUID": 1,
-        "RDTSC": 5,
-        "RDTSCP": 6,
-        "CMOV": 20,
-        "MOVBE": 99,
-        "POPCNT": 100,
-        "LZCNT": 101,
-        "TBM": 102,
-        "BMI": 103,
-        "BMI2": 104,
-        "ADX": 105,
-        "MMX": 30,
-        "MMX+": 31,
-        "FEMMS": 40,
-        "3dnow!": 41,
-        "3dnow!+": 42,
-        "SSE": 50,
-        "SSE2": 51,
-        "SSE3": 52,
-        "SSSE3": 53,
-        "SSE4A": 54,
-        "SSE4.1": 55,
-        "SSE4.2": 56,
-        "FMA3": 60,
-        "FMA4": 61,
-        "XOP": 62,
-        "F16C": 63,
-        "AVX": 70,
-        "AVX2": 71,
-        "AVX512F": 72,
-        "AVX512BW": 73,
-        "AVX512DQ": 74,
-        "AVX512VL": 75,
-        'AVX512PF': 76,
-        'AVX512ER': 77,
-        'AVX512CD': 78,
-        'AVX512VBMI': 79,
-        'AVX512IFMA': 80,
-        "RDRAND": 85,
-        "RDSEED": 86,
-        "PCLMULQDQ": 90,
-        "AES": 91,
-        "SHA": 92,
+        # Quasi-system instructions
+        'CPUID': 1,
+        'RDTSC': 5,
+        'RDTSCP': 6,
+        # General-purpose instructions
+        'CMOV': 20,
+        'MOVBE': 21,
+        'POPCNT': 22,
+        'LZCNT': 23,
+        'TBM': 24,
+        'BMI': 25,
+        'BMI2': 26,
+        'ADX': 27,
+        # Atomic instructions
+        'RAO-INT': 30,
+        # Instructions operating on MMX state
+        'MMX': 40,
+        'MMX+': 41,
+        'FEMMS': 42,
+        '3dnow!': 43,
+        '3dnow!+': 44,
+        # Instructions operating on SSE state
+        'SSE': 50,
+        'SSE2': 51,
+        'SSE3': 52,
+        'SSSE3': 53,
+        'SSE4A': 54,
+        'SSE4.1': 55,
+        'SSE4.2': 56,
+        # Instructions operating on 256-bit AVX registers
+        'AVX': 60,
+        'FMA3': 61,
+        'FMA4': 62,
+        'XOP': 63,
+        'F16C': 64,
+        'AVX2': 65,
+        'AVX-VNNI': 66,
+        'AVX-VNNI-INT8': 67,
+        'AVX-IFMA': 68,
+        'AVX-NE-CONVERT': 69,
+        # Instructions operating on 512-bit AVX512 registers
+        'AVX512F': 80,
+        'AVX512BW': 81,
+        'AVX512DQ': 82,
+        'AVX512VL': 83,
+        'AVX512PF': 84,
+        'AVX512ER': 85,
+        'AVX512CD': 86,
+        'AVX512VBMI': 87,
+        'AVX512IFMA': 88,
+        'AVX512-VPOPCNTDQ': 89,
+        'AVX512-VNNI': 90,
+        'AVX512-VBMI': 91,
+        'AVX512-VBMI2': 92,
+        'AVX512-BITALG': 93,
+        'AVX512-IFMA': 94,
+        'AVX512-BF16': 95,
+        'AVX512-FP16': 96,
+        # RNG instructions
+        'RDRAND': 110,
+        'RDSEED': 111,
+        # Cryptography instructions
+        'PCLMULQDQ': 120,
+        'VPCLMULQDQ': 121,
+        'AES': 122,
+        'VAES': 123,
+        'SHA': 124,
     }
 
     """An extension to x86 instruction set.
 
     :ivar name: name of the ISA extension. Possible values are:
 
-        - "RDTSC"           := The `RDTSC` instruction.
-        - "RDTSCP"          := The `RDTSCP` instruction.
-        - "CPUID"           := The `CPUID` instruction.
-        - "FEMMS"           := The `FEMMS` instruction.
-        - "MOVBE"           := The `MOVBE` instruction.
-        - "POPCNT"          := The `POPCNT` instruction.
-        - "LZCNT"           := The `LZCNT` instruction.
-        - "PCLMULQDQ"       := The `PCLMULQDQ` instruction.
-        - "RDRAND"          := The `RDRAND` instruction.
-        - "RDSEED"          := The `RDSEED` instruction.
-        - "CLFLUSH"         := The `CLFLUSH` instruction.
-        - "CLFLUSHOPT"      := The `CLFLUSHOPT` instruction.
-        - "CLWB"            := The `CLWB` instruction.
-        - "CLZERO"          := The `CLZERO` instruction.
-        - "PREFETCH"        := The `PREFETCH` instruction (3dnow! Prefetch).
-        - "PREFETCHW"       := The `PREFETCHW` instruction (3dnow! Prefetch/Intel PRFCHW).
-        - "PREFETCHWT1"     := The `PREFETCHWT1` instruction.
-        - "MONITOR"         := The `MONITOR` and `MWAIT` instructions.
-        - "MONITORX"        := The `MONITORX` and `MWAITX` instructions.
-        - "CMOV"            := Conditional MOVe instructions.
-        - "MMX"             := MultiMedia eXtension.
-        - "MMX+"            := AMD MMX+ extension / Integer SSE (Intel).
-        - "3dnow!"          := AMD 3dnow! extension.
-        - "3dnow+!"         := AMD 3dnow!+ extension.
-        - "SSE"             := Streaming SIMD Extension.
-        - "SSE2"            := Streaming SIMD Extension 2.
-        - "SSE3"            := Streaming SIMD Extension 3.
-        - "SSSE3"           := Supplemental Streaming SIMD Extension 3.
-        - "SSE4.1"          := Streaming SIMD Extension 4.1.
-        - "SSE4.2"          := Streaming SIMD Extension 4.2.
-        - "SSE4A"           := Streaming SIMD Extension 4a.
-        - "AVX"             := Advanced Vector eXtension.
-        - "AVX2"            := Advanced Vector eXtension 2.
-        - "AVX512F"         := AVX-512 Foundation instructions.
-        - "AVX512BW"        := AVX-512 Byte and Word instructions.
-        - "AVX512DQ"        := AVX-512 Doubleword and Quadword instructions.
-        - "AVX512VL"        := AVX-512 Vector Length extension (EVEX-encoded XMM/YMM operations).
-        - "AVX512PF"        := AVX-512 Prefetch instructions.
-        - "AVX512ER"        := AVX-512 Exponential and Reciprocal instructions.
-        - "AVX512CD"        := AVX-512 Conflict Detection instructions.
-        - "AVX512VBMI"      := AVX-512 Vector Bit Manipulation instructions.
-        - "AVX512IFMA"      := AVX-512 Integer 52-bit Multiply-Accumulate instructions.
-        - "AVX512VPOPCNTDQ" := AVX-512 Vector Population Count instructions.
-        - "XOP"             := eXtended OPerations extension.
-        - "F16C"            := Half-Precision (F16) Conversion instructions.
-        - "FMA3"            := Fused Multiply-Add instructions (3-operand).
-        - "FMA4"            := Fused Multiply-Add instructions (4-operand).
-        - "BMI"             := Bit Manipulation Instructions.
-        - "BMI2"            := Bit Manipulation Instructions 2.
-        - "TBM"             := Trailing Bit Manipulation instructions.
-        - "ADX"             := The `ADCX` and `ADOX` instructions.
-        - "AES"             := `AES` instruction set.
-        - "SHA"             := `SHA` instruction set.
+        - "RDTSC"            := The `RDTSC` instruction.
+        - "RDTSCP"           := The `RDTSCP` instruction.
+        - "CPUID"            := The `CPUID` instruction.
+        - "FEMMS"            := The `FEMMS` instruction.
+        - "MOVBE"            := The `MOVBE` instruction.
+        - "POPCNT"           := The `POPCNT` instruction.
+        - "LZCNT"            := The `LZCNT` instruction.
+        - "PCLMULQDQ"        := The `PCLMULQDQ` instruction.
+        - "VPCLMULQDQ"       := Wide SIMD (256+ bits) versions of the `VPCLMULQDQ` instruction.
+        - "RDRAND"           := The `RDRAND` instruction.
+        - "RDSEED"           := The `RDSEED` instruction.
+        - "CLFLUSH"          := The `CLFLUSH` instruction.
+        - "CLFLUSHOPT"       := The `CLFLUSHOPT` instruction.
+        - "CLWB"             := The `CLWB` instruction.
+        - "CLZERO"           := The `CLZERO` instruction.
+        - "PREFETCH"         := The `PREFETCH` instruction (3dnow! Prefetch).
+        - "PREFETCHW"        := The `PREFETCHW` instruction (3dnow! Prefetch/Intel PRFCHW).
+        - "PREFETCHWT1"      := The `PREFETCHWT1` instruction.
+        - "MONITOR"          := The `MONITOR` and `MWAIT` instructions.
+        - "MONITORX"         := The `MONITORX` and `MWAITX` instructions.
+        - "CMOV"             := Conditional MOVe instructions.
+        - "MMX"              := MultiMedia eXtension.
+        - "MMX+"             := AMD MMX+ extension / Integer SSE (Intel).
+        - "3dnow!"           := AMD 3dnow! extension.
+        - "3dnow+!"          := AMD 3dnow!+ extension.
+        - "SSE"              := Streaming SIMD Extension.
+        - "SSE2"             := Streaming SIMD Extension 2.
+        - "SSE3"             := Streaming SIMD Extension 3.
+        - "SSSE3"            := Supplemental Streaming SIMD Extension 3.
+        - "SSE4.1"           := Streaming SIMD Extension 4.1.
+        - "SSE4.2"           := Streaming SIMD Extension 4.2.
+        - "SSE4A"            := Streaming SIMD Extension 4a.
+        - "AVX"              := Advanced Vector eXtension.
+        - "AVX2"             := Advanced Vector eXtension 2.
+        - "AVX-IFMA"         := AVX Integer 52-bit Multiply-Accumulate instructions.
+        - "AVX-NE-CONVERT"   := AVX No-Exception Conversion instructions.
+        - "AVX-VNNI"         := AVX Vector Neural Network Instructions
+        - "AVX-VNNI-INT8"    := AVX Vector Neural Network Instructions for every INT8 signedness.
+        - "AVX512F"          := AVX-512 Foundation instructions.
+        - "AVX512BW"         := AVX-512 Byte and Word instructions.
+        - "AVX512DQ"         := AVX-512 Doubleword and Quadword instructions.
+        - "AVX512VL"         := AVX-512 Vector Length extension (EVEX-encoded XMM/YMM operations).
+        - "AVX512PF"         := AVX-512 Prefetch instructions.
+        - "AVX512ER"         := AVX-512 Exponential and Reciprocal instructions.
+        - "AVX512CD"         := AVX-512 Conflict Detection instructions.
+        - "AVX512-VPOPCNTDQ" := AVX-512 Vector Population Count Doubleword/Quadword instructions.
+        - "AVX512-VNNI"      := AVX-512 Vector Neural Network Instructions.
+        - "AVX512-VBMI"      := AVX-512 Vector Bit Manipulation instructions.
+        - "AVX512-VBMI2"     := AVX-512 Vector Bit Manipulation 2 instructions.
+        - "AVX512-BITALG"    := AVX-512 Vector Bit Manipulation 2 instructions.
+        - "AVX512-IFMA"      := AVX-512 Integer 52-bit Multiply-Accumulate instructions.
+        - "AVX512-FP16"      := AVX-512 FP16 arithmetics instructions.
+        - "AVX512-BF16"      := AVX-512 BFloat16 instructions.
+        - "XOP"              := eXtended OPerations extension.
+        - "F16C"             := Half-Precision (F16) Conversion instructions.
+        - "FMA3"             := Fused Multiply-Add instructions (3-operand).
+        - "FMA4"             := Fused Multiply-Add instructions (4-operand).
+        - "BMI"              := Bit Manipulation Instructions.
+        - "BMI2"             := Bit Manipulation Instructions 2.
+        - "TBM"              := Trailing Bit Manipulation instructions.
+        - "ADX"              := The `ADCX` and `ADOX` instructions.
+        - "AES"              := `AES` instruction set.
+        - "VAES"             := Wide SIMD (256+ bits) versions of the `AES` instruction set.
+        - "SHA"              := `SHA` instruction set.
     """
 
     def __init__(self, name):
@@ -624,6 +686,12 @@ class EVEX:
 
         0b011
             Decoding map 3. Implies 0x0F 0x3A leading opcode bytes.
+
+        0b101
+            Decoding map 5.
+
+        0b110
+            Decoding map 6.
 
     :ivar pp: the EVEX pp (compressed legacy prefix) field. Possible values are:
 
