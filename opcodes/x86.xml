@@ -49240,6 +49240,190 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="VPDPBSSD" summary="Packed Dot Product of Signed-by-Singed Byte subvectors into Doubleword">
+    <InstructionForm gas-name="vpdpbssd" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbssd" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbssd" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbssd" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPBSSDS" summary="Packed Dot Product of Signed-by-Singed Byte subvectors into Doubleword with Saturation">
+    <InstructionForm gas-name="vpdpbssds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbssds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbssds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbssds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPBSUD" summary="Packed Dot Product of Signed-by-Unsinged Byte subvectors into Doubleword">
+    <InstructionForm gas-name="vpdpbsud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbsud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbsud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbsud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPBSUDS" summary="Packed Dot Product of Signed-by-Unsinged Byte subvectors into Doubleword with Saturation">
+    <InstructionForm gas-name="vpdpbsuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbsuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbsuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbsuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="VPDPBUSD" summary="Packed Dot Product of Unsigned-by-Singed Byte subvectors into Doubleword">
     <InstructionForm gas-name="vpdpbusd" xmm-mode="AVX">
       <ISA id="AVX512-VNNI"/>
@@ -49467,6 +49651,98 @@
       <Operand type="m256" input="true" output="false"/>
       <Encoding>
         <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPBUUD" summary="Packed Dot Product of Unsigned-by-Unsinged Byte subvectors into Doubleword">
+    <InstructionForm gas-name="vpdpbuud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbuud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbuud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbuud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="50"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPBUUDS" summary="Packed Dot Product of Unsigned-by-Unsinged Byte subvectors into Doubleword with Saturation">
+    <InstructionForm gas-name="vpdpbuuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbuuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbuuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="51"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpbuuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT8"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
         <Opcode byte="51"/>
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>

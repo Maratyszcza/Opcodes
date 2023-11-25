@@ -371,6 +371,7 @@
 			<xs:enumeration value="AVX2" />
 			<xs:enumeration value="AVX-IFMA" />
 			<xs:enumeration value="AVX-VNNI" />
+			<xs:enumeration value="AVX-VNNI-INT8" />
 			<xs:enumeration value="XOP" />
 			<xs:enumeration value="FMA3" />
 			<xs:enumeration value="FMA4" />
