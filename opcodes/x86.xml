@@ -53807,6 +53807,50 @@
         <ModRM mode="11" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
+    <InstructionForm gas-name="vpmadd52huq" xmm-mode="AVX">
+      <ISA id="AVX-IFMA"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="B5"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpmadd52huq" xmm-mode="AVX">
+      <ISA id="AVX-IFMA"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="B5"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpmadd52huq" xmm-mode="AVX">
+      <ISA id="AVX-IFMA"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="B5"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpmadd52huq" xmm-mode="AVX">
+      <ISA id="AVX-IFMA"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="B5"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
   </Instruction>
   <Instruction name="VPMADD52LUQ" summary="Packed Multiply of Unsigned 52-bit Integers and Add the Low 52-bit Products to Quadword Accumulators">
     <InstructionForm gas-name="vpmadd52luq" xmm-mode="AVX">
@@ -53877,6 +53921,50 @@
         <EVEX mmm="010" pp="01" LL="10" W="1" vvvv="#1" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
         <Opcode byte="B4"/>
         <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpmadd52luq" xmm-mode="AVX">
+      <ISA id="AVX-IFMA"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="B4"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpmadd52luq" xmm-mode="AVX">
+      <ISA id="AVX-IFMA"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="B4"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpmadd52luq" xmm-mode="AVX">
+      <ISA id="AVX-IFMA"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="B4"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpmadd52luq" xmm-mode="AVX">
+      <ISA id="AVX-IFMA"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="B4"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
