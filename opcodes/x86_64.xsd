@@ -444,6 +444,7 @@
 			<xs:enumeration value="VAES" />
 			<xs:enumeration value="GFNI" />
 			<xs:enumeration value="SHA" />
+			<xs:enumeration value="SHA512" />
 			<xs:enumeration value="RDRAND" />
 			<xs:enumeration value="RDSEED" />
 			<xs:enumeration value="MOVBE" />

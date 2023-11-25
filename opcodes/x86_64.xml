@@ -77777,6 +77777,43 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="VSHA512MSG1" summary="Perform an Intermediate Calculation for the Next Four SHA512 Message Quadwords">
+    <InstructionForm gas-name="vsha512msg1" xmm-mode="AVX">
+      <ISA id="SHA512"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="11" R="#0" B="#1" vvvv="0000"/>
+        <Opcode byte="CC"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VSHA512MSG2" summary="Perform a Final Calculation for the Next Four SHA512 Message Quadwords">
+    <InstructionForm gas-name="vsha512msg2" xmm-mode="AVX">
+      <ISA id="SHA512"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="11" R="#0" B="#1" vvvv="0000"/>
+        <Opcode byte="CD"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VSHA512RNDS2" summary="Perform Two Rounds of SHA512 Operation">
+    <InstructionForm gas-name="vsha512rnds2" xmm-mode="AVX">
+      <ISA id="SHA512"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="11" R="#0" B="#2" vvvv="#1"/>
+        <Opcode byte="CB"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="VSHUFF32X4" summary="Shuffle 128-Bit Packed Single-Precision Floating-Point Values">
     <InstructionForm gas-name="vshuff32x4" xmm-mode="AVX">
       <ISA id="AVX512VL"/>

@@ -477,6 +477,7 @@ class ISAExtension:
         'AES': 122,
         'VAES': 123,
         'SHA': 124,
+        'SHA512': 125,
         # AMX instructions
         'AMX-TILE': 130,
         'AMX-INT8': 131,
@@ -557,6 +558,7 @@ class ISAExtension:
         - "AES"              := `AES` instruction set.
         - "VAES"             := Wide SIMD (256+ bits) versions of the `AES` instruction set.
         - "SHA"              := `SHA` instruction set.
+        - "SHA512"           := `SHA512` instruction set.
     """
 
     def __init__(self, name):
