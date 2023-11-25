@@ -19954,6 +19954,50 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="VBCSTNEBF162PS" summary="Load BF16 Element and Convert to FP32 Element With Broadcas">
+    <InstructionForm gas-name="vbcstnebf162ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="m16" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B1"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vbcstnebf162ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="m16" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B1"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VBCSTNESH2PS" summary="Load FP16 Element and Convert to FP32 Element with Broadcast">
+    <InstructionForm gas-name="vbcstnesh2ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="m16" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B1"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vbcstnesh2ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="m16" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B1"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="VBLENDMPD" summary="Blend Packed Double-Precision Floating-Point Vectors Using an OpMask Control">
     <InstructionForm gas-name="vblendmpd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
@@ -21827,6 +21871,94 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="VCVTNEEBF162PS" summary="Convert Even Elements of Packed BF16 Values to FP32 Values">
+    <InstructionForm gas-name="vcvtneebf162ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B0"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneebf162ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B0"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VCVTNEEPH2PS" summary="Convert Even Elements of Packed FP16 Values to FP32 Values">
+    <InstructionForm gas-name="vcvtneeph2ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B0"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneeph2ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B0"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VCVTNEOBF162PS" summary="Convert Odd Elements of Packed BF16 Values to FP32 Values">
+    <InstructionForm gas-name="vcvtneobf162ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B0"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneobf162ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="11" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B0"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VCVTNEOPH2PS" summary="Convert Odd Elements of Packed FP16 Values to FP32 Values">
+    <InstructionForm gas-name="vcvtneoph2ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B0"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneoph2ps" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="ymm" input="false" output="true"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="B0"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="VCVTNEPS2BF16" summary="Convert with Nearest-Even rounding a Single-Precision FP vector into a BFloat16 FP vector">
     <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
       <ISA id="AVX512-BF16"/>
@@ -21890,6 +22022,46 @@
         <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="00" B="0" X="0" b="0" aaa="#0" z="#0"/>
         <Opcode byte="72"/>
         <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="72"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="72"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="72"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+      <ISA id="AVX-NE-CONVERT"/>
+      <Operand type="xmm" input="false" output="true"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="0000"/>
+        <Opcode byte="72"/>
+        <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
   </Instruction>

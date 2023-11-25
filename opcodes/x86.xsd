@@ -370,6 +370,7 @@
 			<xs:enumeration value="AVX" />
 			<xs:enumeration value="AVX2" />
 			<xs:enumeration value="AVX-IFMA" />
+			<xs:enumeration value="AVX-NE-CONVERT" />
 			<xs:enumeration value="AVX-VNNI" />
 			<xs:enumeration value="AVX-VNNI-INT8" />
 			<xs:enumeration value="XOP" />
