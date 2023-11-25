@@ -447,8 +447,9 @@ class ISAExtension:
         'AVX2': 65,
         'AVX-VNNI': 66,
         'AVX-VNNI-INT8': 67,
-        'AVX-IFMA': 68,
-        'AVX-NE-CONVERT': 69,
+        'AVX-VNNI-INT16': 68,
+        'AVX-IFMA': 69,
+        'AVX-NE-CONVERT': 70,
         # Instructions operating on 512-bit AVX512 registers
         'AVX512F': 80,
         'AVX512BW': 81,
@@ -525,6 +526,7 @@ class ISAExtension:
         - "AVX-NE-CONVERT"   := AVX No-Exception Conversion instructions.
         - "AVX-VNNI"         := AVX Vector Neural Network Instructions
         - "AVX-VNNI-INT8"    := AVX Vector Neural Network Instructions for every INT8 signedness.
+        - "AVX-VNNI-INT16"   := AVX Vector Neural Network Instructions for every INT16 signedness.
         - "AVX512F"          := AVX-512 Foundation instructions.
         - "AVX512BW"         := AVX-512 Byte and Word instructions.
         - "AVX512DQ"         := AVX-512 Doubleword and Quadword instructions.

@@ -50207,6 +50207,282 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="VPDPWSUD" summary="Packed Dot Product of Signed-by-Unsigned Word subvectors into Doubleword">
+    <InstructionForm gas-name="vpdpwsud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwsud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwsud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwsud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPWSUDS" summary="Packed Dot Product of Signed-by-Unsigned Word subvectors into Doubleword with Saturation">
+    <InstructionForm gas-name="vpdpwsuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwsuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwsuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwsuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="10" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPWUSD" summary="Packed Dot Product of Unsigned-by-Signed Word subvectors into Doubleword">
+    <InstructionForm gas-name="vpdpwusd" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwusd" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwusd" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwusd" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPWUSDS" summary="Packed Dot Product of Unsigned-by-Signed Word subvectors into Doubleword with Saturation">
+    <InstructionForm gas-name="vpdpwusds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwusds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwusds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwusds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="01" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPWUUD" summary="Packed Dot Product of Unsigned-by-Unsigned Word subvectors into Doubleword">
+    <InstructionForm gas-name="vpdpwuud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwuud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwuud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwuud" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D2"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="VPDPWUUDS" summary="Packed Dot Product of Unsigned-by-Unsigned Word subvectors into Doubleword with Saturation">
+    <InstructionForm gas-name="vpdpwuuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwuuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="xmm" input="true" output="true"/>
+      <Operand type="xmm" input="true" output="false"/>
+      <Operand type="m128" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwuuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="11" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="vpdpwuuds" xmm-mode="AVX">
+      <ISA id="AVX-VNNI-INT16"/>
+      <Operand type="ymm" input="true" output="true"/>
+      <Operand type="ymm" input="true" output="false"/>
+      <Operand type="m256" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="1" m-mmmm="00010" pp="00" R="0" X="0" B="0" vvvv="#1"/>
+        <Opcode byte="D3"/>
+        <ModRM mode="#2" reg="#0" rm="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="VPERM2F128" summary="Permute Floating-Point Values">
     <InstructionForm gas-name="vperm2f128" xmm-mode="AVX">
       <ISA id="AVX"/>
