@@ -16185,6 +16185,30 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="PREFETCHIT0" summary="Prefetch Code Into Instruction Caches using IT0 Hint">
+    <InstructionForm gas-name="prefetchit0">
+      <ISA id="PREFETCHI"/>
+      <Operand type="m8" input="true" output="false"/>
+      <Encoding>
+        <REX mandatory="false" W="0" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="18"/>
+        <ModRM mode="#0" reg="7" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="PREFETCHIT1" summary="Prefetch Code Into Instruction Caches using IT1 Hint">
+    <InstructionForm gas-name="prefetchit1">
+      <ISA id="PREFETCHI"/>
+      <Operand type="m8" input="true" output="false"/>
+      <Encoding>
+        <REX mandatory="false" W="0" B="#0" X="#0"/>
+        <Opcode byte="0F"/>
+        <Opcode byte="18"/>
+        <ModRM mode="#0" reg="6" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="PREFETCHNTA" summary="Prefetch Data Into Caches using NTA Hint">
     <InstructionForm gas-name="prefetchnta" go-name="PREFETCHNTA" nacl-version="33">
       <ISA id="MMX+"/>
