@@ -457,6 +457,7 @@
 			<xs:enumeration value="TBM" />
 			<xs:enumeration value="ADX" />
 			<xs:enumeration value="RAO-INT" />
+			<xs:enumeration value="CMPCCXADD" />
 			<xs:enumeration value="CLFLUSH" />
 			<xs:enumeration value="CLFLUSHOPT" />
 			<xs:enumeration value="CLWB" />

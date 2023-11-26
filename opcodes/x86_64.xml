@@ -5520,6 +5520,318 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="CMPBEXADD" summary="Compare for Below or Equals and Add">
+    <InstructionForm gas-name="cmpbexadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E6"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpbexadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E6"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPBXADD" summary="Compare for Below and Add">
+    <InstructionForm gas-name="cmpbxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E2"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpbxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E2"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPLEXADD" summary="Compare for Less or Equals and Add">
+    <InstructionForm gas-name="cmplexadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EE"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmplexadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EE"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPLXADD" summary="Compare for Less and Add">
+    <InstructionForm gas-name="cmplxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmplxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EC"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPNBEXADD" summary="Compare for Not Below or Equals and Add">
+    <InstructionForm gas-name="cmpnbexadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E7"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpnbexadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E7"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPNBXADD" summary="Compare for Not Below and Add">
+    <InstructionForm gas-name="cmpnbxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E3"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpnbxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E3"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPNLEXADD" summary="Compare for Not Less or Equals and Add">
+    <InstructionForm gas-name="cmpnlexadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EF"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpnlexadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EF"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPNLXADD" summary="Compare for Not Less and Add">
+    <InstructionForm gas-name="cmpnlxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="ED"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpnlxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="ED"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPNOXADD" summary="Compare for Not Overflow and Add">
+    <InstructionForm gas-name="cmpnoxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E1"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpnoxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E1"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPNPXADD" summary="Compare for Not Parity and Add">
+    <InstructionForm gas-name="cmpnpxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EB"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpnpxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EB"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPNSXADD" summary="Compare for Not Sign and Add">
+    <InstructionForm gas-name="cmpnsxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E9"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpnsxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E9"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPNZXADD" summary="Compare for Not Zero and Add">
+    <InstructionForm gas-name="cmpnzxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E5"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpnzxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E5"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPOXADD" summary="Compare for Overflow and Add">
+    <InstructionForm gas-name="cmpoxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E0"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpoxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E0"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="CMPPD" summary="Compare Packed Double-Precision Floating-Point Values">
     <InstructionForm gas-name="cmppd" go-name="CMPPD" xmm-mode="SSE" nacl-version="33">
       <ISA id="SSE2"/>
@@ -5575,6 +5887,30 @@
         <Opcode byte="C2"/>
         <ModRM mode="#1" reg="#0" rm="#1"/>
         <Immediate size="1" value="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPPXADD" summary="Compare for Parity and Add">
+    <InstructionForm gas-name="cmppxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EA"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmppxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="EA"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
@@ -5635,6 +5971,30 @@
         <Opcode byte="C2"/>
         <ModRM mode="#1" reg="#0" rm="#1"/>
         <Immediate size="1" value="#2"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPSXADD" summary="Compare for Sign and Add">
+    <InstructionForm gas-name="cmpsxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E8"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpsxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E8"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
@@ -5749,6 +6109,30 @@
         <Opcode byte="0F"/>
         <Opcode byte="C7"/>
         <ModRM mode="#0" reg="1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="CMPZXADD" summary="Compare for Zero and Add">
+    <InstructionForm gas-name="cmpzxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="true"/>
+      <Operand type="r32" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E4"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+    <InstructionForm gas-name="cmpzxadd">
+      <ISA id="CMPCCXADD"/>
+      <Operand type="m64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="true"/>
+      <Operand type="r64" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00010" pp="01" R="#1" B="#0" X="#0" vvvv="#2"/>
+        <Opcode byte="E4"/>
+        <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
     </InstructionForm>
   </Instruction>

@@ -423,7 +423,8 @@ class ISAExtension:
         'BMI2': 26,
         'ADX': 27,
         # Atomic instructions
-        'RAO-INT': 30,
+        'CMPCCXADD': 30,
+        'RAO-INT': 31,
         # Instructions operating on MMX state
         'MMX': 40,
         'MMX+': 41,
@@ -514,6 +515,8 @@ class ISAExtension:
         - "MONITOR"          := The `MONITOR` and `MWAIT` instructions.
         - "MONITORX"         := The `MONITORX` and `MWAITX` instructions.
         - "CMOV"             := Conditional MOVe instructions.
+        - "CMPCCXADD"        := Compare and Add instructions.
+        - "RAO-INT"          := Remote Atomic Operations extension.
         - "MMX"              := MultiMedia eXtension.
         - "MMX+"             := AMD MMX+ extension / Integer SSE (Intel).
         - "3dnow!"           := AMD 3dnow! extension.
