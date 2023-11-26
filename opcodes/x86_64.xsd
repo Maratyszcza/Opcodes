@@ -482,6 +482,7 @@
 			<xs:enumeration value="AVX512-VNNI" />
 			<xs:enumeration value="AVX512-VPOPCNTDQ" />
 			<xs:enumeration value="AMX-BF16" />
+			<xs:enumeration value="AMX-COMPLEX" />
 			<xs:enumeration value="AMX-FP16" />
 			<xs:enumeration value="AMX-INT8" />
 			<xs:enumeration value="AMX-TILE" />

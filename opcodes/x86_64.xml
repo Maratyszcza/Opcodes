@@ -22567,6 +22567,32 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="TCMMIMFP16PS" summary="Tile Complex Matrix Multiply IMaginary part of FP16 tiles with Packed Single-precision accumulation">
+    <InstructionForm gas-name="tcmmimfp16ps">
+      <ISA id="AMX-COMPLEX"/>
+      <Operand type="tmm" input="true" output="true"/>
+      <Operand type="tmm" input="true" output="false"/>
+      <Operand type="tmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="01" R="#0" B="#1" vvvv="#2"/>
+        <Opcode byte="6C"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="TCMMRLFP16PS" summary="Tile Complex Matrix Multiply ReaL part of FP16 tiles with Packed Single-precision accumulation">
+    <InstructionForm gas-name="tcmmrlfp16ps">
+      <ISA id="AMX-COMPLEX"/>
+      <Operand type="tmm" input="true" output="true"/>
+      <Operand type="tmm" input="true" output="false"/>
+      <Operand type="tmm" input="true" output="false"/>
+      <Encoding>
+        <VEX type="VEX" W="0" L="0" m-mmmm="00010" pp="00" R="#0" B="#1" vvvv="#2"/>
+        <Opcode byte="6C"/>
+        <ModRM mode="11" reg="#0" rm="#1"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="TDPBF16PS" summary="Tile Dot Product of BF16 tiles with Packed Single-precision accumulation">
     <InstructionForm gas-name="tdpbf16ps">
       <ISA id="AMX-BF16"/>

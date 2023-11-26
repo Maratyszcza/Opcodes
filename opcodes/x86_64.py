@@ -485,6 +485,7 @@ class ISAExtension:
         'AMX-INT8': 131,
         'AMX-BF16': 132,
         'AMX-FP16': 133,
+        'AMX-COMPLEX': 134,
     }
 
     """An extension to x86-64 instruction set.
@@ -549,6 +550,7 @@ class ISAExtension:
         - "AMX-INT8"         := Advanced Vector eXtension INT8 matrix-matrix multiplication instructions.
         - "AMX-BF16"         := Advanced Vector eXtension BFloat16 matrix-matrix multiplication instruction.
         - "AMX-FP16"         := Advanced Vector eXtension FP16 matrix-matrix multiplication instruction.
+        - "AMX-COMPLEX"      := Advanced Vector eXtension COMPLEX matrix-matrix multiplication instructions.
         - "XOP"              := eXtended OPerations extension.
         - "F16C"             := Half-Precision (F16) Conversion instructions.
         - "FMA3"             := Fused Multiply-Add instructions (3-operand).
