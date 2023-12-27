@@ -4421,7 +4421,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CVTSI2SD" summary="Convert Dword Integer to Scalar Double-Precision FP Value">
-    <InstructionForm gas-name="cvtsi2sd" go-name="CVTSL2SD" xmm-mode="SSE">
+    <InstructionForm gas-name="cvtsi2sdl" go-name="CVTSL2SD" xmm-mode="SSE">
       <ISA id="SSE2"/>
       <Operand type="xmm" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -4432,7 +4432,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cvtsi2sd" go-name="CVTSL2SD" xmm-mode="SSE">
+    <InstructionForm gas-name="cvtsi2sdl" go-name="CVTSL2SD" xmm-mode="SSE">
       <ISA id="SSE2"/>
       <Operand type="xmm" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -4445,7 +4445,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CVTSI2SS" summary="Convert Dword Integer to Scalar Single-Precision FP Value">
-    <InstructionForm gas-name="cvtsi2ss" go-name="CVTSL2SS" xmm-mode="SSE">
+    <InstructionForm gas-name="cvtsi2ssl" go-name="CVTSL2SS" xmm-mode="SSE">
       <ISA id="SSE"/>
       <Operand type="xmm" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -4456,7 +4456,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cvtsi2ss" go-name="CVTSL2SS" xmm-mode="SSE">
+    <InstructionForm gas-name="cvtsi2ssl" go-name="CVTSL2SS" xmm-mode="SSE">
       <ISA id="SSE"/>
       <Operand type="xmm" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -24288,7 +24288,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTSI2SD" summary="Convert Dword Integer to Scalar Double-Precision FP Value">
-    <InstructionForm gas-name="vcvtsi2sd" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2sdl" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24299,7 +24299,7 @@
         <ModRM mode="11" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtsi2sd" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2sdl" xmm-mode="AVX">
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24310,7 +24310,7 @@
         <ModRM mode="11" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtsi2sd" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2sdl" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24321,7 +24321,7 @@
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtsi2sd" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2sdl" xmm-mode="AVX">
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24359,7 +24359,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTSI2SS" summary="Convert Dword Integer to Scalar Single-Precision FP Value">
-    <InstructionForm gas-name="vcvtsi2ss" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2ssl" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24370,7 +24370,7 @@
         <ModRM mode="11" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtsi2ss" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2ssl" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24381,7 +24381,7 @@
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtsi2ss" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2ssl" xmm-mode="AVX">
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24392,7 +24392,7 @@
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtsi2ss" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2ssl" xmm-mode="AVX">
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -26141,7 +26141,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTUSI2SD" summary="Convert Unsigned Integer to Scalar Double-Precision Floating-Point Value">
-    <InstructionForm gas-name="vcvtusi2sd" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtusi2sdl" xmm-mode="AVX">
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -26152,7 +26152,7 @@
         <ModRM mode="11" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtusi2sd" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtusi2sdl" xmm-mode="AVX">
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
