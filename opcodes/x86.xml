@@ -1197,7 +1197,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="BEXTR" summary="Bit Field Extract">
-    <InstructionForm gas-name="bextr">
+    <InstructionForm gas-name="bextrl">
       <ISA id="TBM"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -1209,7 +1209,7 @@
         <Immediate size="4" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="bextr">
+    <InstructionForm gas-name="bextrl">
       <ISA id="BMI"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -1220,7 +1220,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="bextr">
+    <InstructionForm gas-name="bextrl">
       <ISA id="TBM"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -1232,7 +1232,7 @@
         <Immediate size="4" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="bextr">
+    <InstructionForm gas-name="bextrl">
       <ISA id="BMI"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -1243,7 +1243,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="bextr">
+    <InstructionForm gas-name="bextrq">
       <ISA id="TBM"/>
       <Operand type="r64" input="false" output="true"/>
       <Operand type="r64" input="true" output="false"/>
@@ -1255,7 +1255,7 @@
         <Immediate size="4" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="bextr">
+    <InstructionForm gas-name="bextrq">
       <ISA id="TBM"/>
       <Operand type="r64" input="false" output="true"/>
       <Operand type="m64" input="true" output="false"/>
@@ -1637,7 +1637,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="BLSI" summary="Isolate Lowest Set Bit">
-    <InstructionForm gas-name="blsi">
+    <InstructionForm gas-name="blsil">
       <ISA id="BMI"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -1647,7 +1647,7 @@
         <ModRM mode="11" reg="3" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="blsi">
+    <InstructionForm gas-name="blsil">
       <ISA id="BMI"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -1701,7 +1701,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="BLSMSK" summary="Mask From Lowest Set Bit">
-    <InstructionForm gas-name="blsmsk">
+    <InstructionForm gas-name="blsmskl">
       <ISA id="BMI"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -1711,7 +1711,7 @@
         <ModRM mode="11" reg="2" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="blsmsk">
+    <InstructionForm gas-name="blsmskl">
       <ISA id="BMI"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -1723,7 +1723,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="BLSR" summary="Reset Lowest Set Bit">
-    <InstructionForm gas-name="blsr">
+    <InstructionForm gas-name="blsrl">
       <ISA id="BMI"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -1733,7 +1733,7 @@
         <ModRM mode="11" reg="1" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="blsr">
+    <InstructionForm gas-name="blsrl">
       <ISA id="BMI"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2162,7 +2162,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="BZHI" summary="Zero High Bits Starting with Specified Bit Position">
-    <InstructionForm gas-name="bzhi">
+    <InstructionForm gas-name="bzhil">
       <ISA id="BMI2"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2173,7 +2173,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="bzhi">
+    <InstructionForm gas-name="bzhil">
       <ISA id="BMI2"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2295,7 +2295,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVA" summary="Move if above (CF == 0 and ZF == 0)">
-    <InstructionForm gas-name="cmova">
+    <InstructionForm gas-name="cmovaw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2306,7 +2306,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmova">
+    <InstructionForm gas-name="cmovaw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2317,7 +2317,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmova">
+    <InstructionForm gas-name="cmoval">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2327,7 +2327,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmova">
+    <InstructionForm gas-name="cmoval">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2339,7 +2339,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVAE" summary="Move if above or equal (CF == 0)">
-    <InstructionForm gas-name="cmovae">
+    <InstructionForm gas-name="cmovaew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2350,7 +2350,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovae">
+    <InstructionForm gas-name="cmovaew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2361,7 +2361,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovae">
+    <InstructionForm gas-name="cmovael">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2371,7 +2371,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovae">
+    <InstructionForm gas-name="cmovael">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2383,7 +2383,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVB" summary="Move if below (CF == 1)">
-    <InstructionForm gas-name="cmovb">
+    <InstructionForm gas-name="cmovbw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2394,7 +2394,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovb">
+    <InstructionForm gas-name="cmovbw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2405,7 +2405,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovb">
+    <InstructionForm gas-name="cmovbl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2415,7 +2415,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovb">
+    <InstructionForm gas-name="cmovbl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2427,7 +2427,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVBE" summary="Move if below or equal (CF == 1 or ZF == 1)">
-    <InstructionForm gas-name="cmovbe">
+    <InstructionForm gas-name="cmovbew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2438,7 +2438,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovbe">
+    <InstructionForm gas-name="cmovbew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2449,7 +2449,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovbe">
+    <InstructionForm gas-name="cmovbel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2459,7 +2459,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovbe">
+    <InstructionForm gas-name="cmovbel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2471,7 +2471,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVC" summary="Move if carry (CF == 1)">
-    <InstructionForm gas-name="cmovc">
+    <InstructionForm gas-name="cmovcw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2482,7 +2482,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovc">
+    <InstructionForm gas-name="cmovcw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2493,7 +2493,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovc">
+    <InstructionForm gas-name="cmovcl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2503,7 +2503,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovc">
+    <InstructionForm gas-name="cmovcl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2515,7 +2515,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVE" summary="Move if equal (ZF == 1)">
-    <InstructionForm gas-name="cmove">
+    <InstructionForm gas-name="cmovew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2526,7 +2526,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmove">
+    <InstructionForm gas-name="cmovew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2537,7 +2537,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmove">
+    <InstructionForm gas-name="cmovel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2547,7 +2547,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmove">
+    <InstructionForm gas-name="cmovel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2559,7 +2559,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVG" summary="Move if greater (ZF == 0 and SF == OF)">
-    <InstructionForm gas-name="cmovg">
+    <InstructionForm gas-name="cmovgw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2570,7 +2570,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovg">
+    <InstructionForm gas-name="cmovgw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2581,7 +2581,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovg">
+    <InstructionForm gas-name="cmovgl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2591,7 +2591,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovg">
+    <InstructionForm gas-name="cmovgl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2603,7 +2603,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVGE" summary="Move if greater or equal (SF == OF)">
-    <InstructionForm gas-name="cmovge">
+    <InstructionForm gas-name="cmovgew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2614,7 +2614,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovge">
+    <InstructionForm gas-name="cmovgew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2625,7 +2625,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovge">
+    <InstructionForm gas-name="cmovgel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2635,7 +2635,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovge">
+    <InstructionForm gas-name="cmovgel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2647,7 +2647,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVL" summary="Move if less (SF != OF)">
-    <InstructionForm gas-name="cmovl">
+    <InstructionForm gas-name="cmovlw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2658,7 +2658,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovl">
+    <InstructionForm gas-name="cmovlw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2669,7 +2669,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovl">
+    <InstructionForm gas-name="cmovll">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2679,7 +2679,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovl">
+    <InstructionForm gas-name="cmovll">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2691,7 +2691,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVLE" summary="Move if less or equal (ZF == 1 or SF != OF)">
-    <InstructionForm gas-name="cmovle">
+    <InstructionForm gas-name="cmovlew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2702,7 +2702,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovle">
+    <InstructionForm gas-name="cmovlew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2713,7 +2713,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovle">
+    <InstructionForm gas-name="cmovlel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2723,7 +2723,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovle">
+    <InstructionForm gas-name="cmovlel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2735,7 +2735,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNA" summary="Move if not above (CF == 1 or ZF == 1)">
-    <InstructionForm gas-name="cmovna">
+    <InstructionForm gas-name="cmovnaw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2746,7 +2746,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovna">
+    <InstructionForm gas-name="cmovnaw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2757,7 +2757,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovna">
+    <InstructionForm gas-name="cmovnal">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2767,7 +2767,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovna">
+    <InstructionForm gas-name="cmovnal">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2779,7 +2779,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNAE" summary="Move if not above or equal (CF == 1)">
-    <InstructionForm gas-name="cmovnae">
+    <InstructionForm gas-name="cmovnaew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2790,7 +2790,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnae">
+    <InstructionForm gas-name="cmovnaew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2801,7 +2801,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnae">
+    <InstructionForm gas-name="cmovnael">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2811,7 +2811,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnae">
+    <InstructionForm gas-name="cmovnael">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2823,7 +2823,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNB" summary="Move if not below (CF == 0)">
-    <InstructionForm gas-name="cmovnb">
+    <InstructionForm gas-name="cmovnbw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2834,7 +2834,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnb">
+    <InstructionForm gas-name="cmovnbw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2845,7 +2845,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnb">
+    <InstructionForm gas-name="cmovnbl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2855,7 +2855,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnb">
+    <InstructionForm gas-name="cmovnbl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2867,7 +2867,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNBE" summary="Move if not below or equal (CF == 0 and ZF == 0)">
-    <InstructionForm gas-name="cmovnbe">
+    <InstructionForm gas-name="cmovnbew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2878,7 +2878,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnbe">
+    <InstructionForm gas-name="cmovnbew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2889,7 +2889,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnbe">
+    <InstructionForm gas-name="cmovnbel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2899,7 +2899,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnbe">
+    <InstructionForm gas-name="cmovnbel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2911,7 +2911,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNC" summary="Move if not carry (CF == 0)">
-    <InstructionForm gas-name="cmovnc">
+    <InstructionForm gas-name="cmovncw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2922,7 +2922,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnc">
+    <InstructionForm gas-name="cmovncw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2933,7 +2933,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnc">
+    <InstructionForm gas-name="cmovncl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2943,7 +2943,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnc">
+    <InstructionForm gas-name="cmovncl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2955,7 +2955,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNE" summary="Move if not equal (ZF == 0)">
-    <InstructionForm gas-name="cmovne">
+    <InstructionForm gas-name="cmovnew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -2966,7 +2966,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovne">
+    <InstructionForm gas-name="cmovnew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -2977,7 +2977,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovne">
+    <InstructionForm gas-name="cmovnel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -2987,7 +2987,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovne">
+    <InstructionForm gas-name="cmovnel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -2999,7 +2999,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNG" summary="Move if not greater (ZF == 1 or SF != OF)">
-    <InstructionForm gas-name="cmovng">
+    <InstructionForm gas-name="cmovngw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3010,7 +3010,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovng">
+    <InstructionForm gas-name="cmovngw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3021,7 +3021,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovng">
+    <InstructionForm gas-name="cmovngl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3031,7 +3031,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovng">
+    <InstructionForm gas-name="cmovngl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3043,7 +3043,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNGE" summary="Move if not greater or equal (SF != OF)">
-    <InstructionForm gas-name="cmovnge">
+    <InstructionForm gas-name="cmovngew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3054,7 +3054,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnge">
+    <InstructionForm gas-name="cmovngew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3065,7 +3065,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnge">
+    <InstructionForm gas-name="cmovngel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3075,7 +3075,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnge">
+    <InstructionForm gas-name="cmovngel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3087,7 +3087,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNL" summary="Move if not less (SF == OF)">
-    <InstructionForm gas-name="cmovnl">
+    <InstructionForm gas-name="cmovnlw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3098,7 +3098,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnl">
+    <InstructionForm gas-name="cmovnlw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3109,7 +3109,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnl">
+    <InstructionForm gas-name="cmovnll">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3119,7 +3119,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnl">
+    <InstructionForm gas-name="cmovnll">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3131,7 +3131,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNLE" summary="Move if not less or equal (ZF == 0 and SF == OF)">
-    <InstructionForm gas-name="cmovnle">
+    <InstructionForm gas-name="cmovnlew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3142,7 +3142,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnle">
+    <InstructionForm gas-name="cmovnlew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3153,7 +3153,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnle">
+    <InstructionForm gas-name="cmovnlel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3163,7 +3163,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnle">
+    <InstructionForm gas-name="cmovnlel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3175,7 +3175,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNO" summary="Move if not overflow (OF == 0)">
-    <InstructionForm gas-name="cmovno">
+    <InstructionForm gas-name="cmovnow">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3186,7 +3186,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovno">
+    <InstructionForm gas-name="cmovnow">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3197,7 +3197,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovno">
+    <InstructionForm gas-name="cmovnol">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3207,7 +3207,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovno">
+    <InstructionForm gas-name="cmovnol">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3219,7 +3219,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNP" summary="Move if not parity (PF == 0)">
-    <InstructionForm gas-name="cmovnp">
+    <InstructionForm gas-name="cmovnpw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3230,7 +3230,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnp">
+    <InstructionForm gas-name="cmovnpw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3241,7 +3241,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnp">
+    <InstructionForm gas-name="cmovnpl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3251,7 +3251,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnp">
+    <InstructionForm gas-name="cmovnpl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3263,7 +3263,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNS" summary="Move if not sign (SF == 0)">
-    <InstructionForm gas-name="cmovns">
+    <InstructionForm gas-name="cmovnsw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3274,7 +3274,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovns">
+    <InstructionForm gas-name="cmovnsw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3285,7 +3285,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovns">
+    <InstructionForm gas-name="cmovnsl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3295,7 +3295,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovns">
+    <InstructionForm gas-name="cmovnsl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3307,7 +3307,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVNZ" summary="Move if not zero (ZF == 0)">
-    <InstructionForm gas-name="cmovnz">
+    <InstructionForm gas-name="cmovnzw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3318,7 +3318,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnz">
+    <InstructionForm gas-name="cmovnzw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3329,7 +3329,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnz">
+    <InstructionForm gas-name="cmovnzl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3339,7 +3339,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovnz">
+    <InstructionForm gas-name="cmovnzl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3351,7 +3351,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVO" summary="Move if overflow (OF == 1)">
-    <InstructionForm gas-name="cmovo">
+    <InstructionForm gas-name="cmovow">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3362,7 +3362,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovo">
+    <InstructionForm gas-name="cmovow">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3373,7 +3373,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovo">
+    <InstructionForm gas-name="cmovol">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3383,7 +3383,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovo">
+    <InstructionForm gas-name="cmovol">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3395,7 +3395,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVP" summary="Move if parity (PF == 1)">
-    <InstructionForm gas-name="cmovp">
+    <InstructionForm gas-name="cmovpw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3406,7 +3406,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovp">
+    <InstructionForm gas-name="cmovpw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3417,7 +3417,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovp">
+    <InstructionForm gas-name="cmovpl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3427,7 +3427,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovp">
+    <InstructionForm gas-name="cmovpl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3439,7 +3439,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVPE" summary="Move if parity even (PF == 1)">
-    <InstructionForm gas-name="cmovpe">
+    <InstructionForm gas-name="cmovpew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3450,7 +3450,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovpe">
+    <InstructionForm gas-name="cmovpew">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3461,7 +3461,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovpe">
+    <InstructionForm gas-name="cmovpel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3471,7 +3471,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovpe">
+    <InstructionForm gas-name="cmovpel">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3483,7 +3483,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVPO" summary="Move if parity odd (PF == 0)">
-    <InstructionForm gas-name="cmovpo">
+    <InstructionForm gas-name="cmovpow">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3494,7 +3494,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovpo">
+    <InstructionForm gas-name="cmovpow">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3505,7 +3505,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovpo">
+    <InstructionForm gas-name="cmovpol">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3515,7 +3515,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovpo">
+    <InstructionForm gas-name="cmovpol">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3527,7 +3527,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVS" summary="Move if sign (SF == 1)">
-    <InstructionForm gas-name="cmovs">
+    <InstructionForm gas-name="cmovsw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3538,7 +3538,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovs">
+    <InstructionForm gas-name="cmovsw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3549,7 +3549,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovs">
+    <InstructionForm gas-name="cmovsl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3559,7 +3559,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovs">
+    <InstructionForm gas-name="cmovsl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -3571,7 +3571,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="CMOVZ" summary="Move if zero (ZF == 1)">
-    <InstructionForm gas-name="cmovz">
+    <InstructionForm gas-name="cmovzw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="r16" input="true" output="false"/>
@@ -3582,7 +3582,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovz">
+    <InstructionForm gas-name="cmovzw">
       <ISA id="CMOV"/>
       <Operand type="r16" input="true" output="true"/>
       <Operand type="m16" input="true" output="false"/>
@@ -3593,7 +3593,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovz">
+    <InstructionForm gas-name="cmovzl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -3603,7 +3603,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="cmovz">
+    <InstructionForm gas-name="cmovzl">
       <ISA id="CMOV"/>
       <Operand type="r32" input="true" output="true"/>
       <Operand type="m32" input="true" output="false"/>
@@ -10492,7 +10492,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="PDEP" summary="Parallel Bits Deposit">
-    <InstructionForm gas-name="pdep">
+    <InstructionForm gas-name="pdepl">
       <ISA id="BMI2"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -10503,7 +10503,7 @@
         <ModRM mode="11" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="pdep">
+    <InstructionForm gas-name="pdepl">
       <ISA id="BMI2"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -10516,7 +10516,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="PEXT" summary="Parallel Bits Extract">
-    <InstructionForm gas-name="pext">
+    <InstructionForm gas-name="pextl">
       <ISA id="BMI2"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -10527,7 +10527,7 @@
         <ModRM mode="11" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="pext">
+    <InstructionForm gas-name="pextl">
       <ISA id="BMI2"/>
       <Operand type="r32" input="false" output="true"/>
       <Operand type="r32" input="true" output="false"/>
@@ -15095,12 +15095,12 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="RET" summary="Return from Procedure">
-    <InstructionForm gas-name="ret" go-name="RET">
+    <InstructionForm gas-name="retl" go-name="RET">
       <Encoding>
         <Opcode byte="C3"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="ret" go-name="RET">
+    <InstructionForm gas-name="retl">
       <Operand type="imm16"/>
       <Encoding>
         <Opcode byte="C2"/>
