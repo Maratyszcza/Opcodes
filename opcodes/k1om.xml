@@ -5285,12 +5285,12 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="RET" summary="Return from Procedure">
-    <InstructionForm gas-name="ret">
+    <InstructionForm gas-name="retq">
       <Encoding>
         <Opcode byte="C3"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="ret">
+    <InstructionForm gas-name="retq">
       <Operand type="imm16"/>
       <Encoding>
         <Opcode byte="C2"/>
