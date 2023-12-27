@@ -1,0 +1,23 @@
+name: Encoding validation
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Download binutils 2.41
+      working-directory: /tmp
+      run: |
+        wget --no-verbose -c https://ftp.gnu.org/gnu/binutils/binutils-2.41.tar.gz -O - | tar -xz
+    - name: Build binutils 2.41
+      working-directory: /tmp/binutils-2.41
+      run: |
+        ./configure --prefix=/tmp/binutils --enable-gold=no --enable-ld=no --enable-gprofng=no --disable-libquadmath --disable-libstdcxx
+        make -j$(nproc)
