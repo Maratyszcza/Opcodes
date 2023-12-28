@@ -8155,16 +8155,17 @@
   </Instruction>
   <Instruction name="INT" summary="Call to Interrupt Procedure">
     <InstructionForm gas-name="int" go-name="INT">
-      <Operand type="3"/>
-      <Encoding>
-        <Opcode byte="CC"/>
-      </Encoding>
-    </InstructionForm>
-    <InstructionForm gas-name="int" go-name="INT">
       <Operand type="imm8"/>
       <Encoding>
         <Opcode byte="CD"/>
         <Immediate size="1" value="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="INT3" summary="Interrupt 3 (debug trap)">
+    <InstructionForm gas-name="int3">
+      <Encoding>
+        <Opcode byte="CC"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
