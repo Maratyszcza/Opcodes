@@ -10198,7 +10198,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="PCMPESTRI" summary="Packed Compare Explicit Length Strings, Return Index">
-    <InstructionForm gas-name="pcmpestri" xmm-mode="SSE">
+    <InstructionForm gas-name="pcmpestril" xmm-mode="SSE">
       <ISA id="SSE4.2"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -10215,7 +10215,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="pcmpestri" xmm-mode="SSE">
+    <InstructionForm gas-name="pcmpestril" xmm-mode="SSE">
       <ISA id="SSE4.2"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
@@ -10234,7 +10234,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="PCMPESTRM" summary="Packed Compare Explicit Length Strings, Return Mask">
-    <InstructionForm gas-name="pcmpestrm" xmm-mode="SSE">
+    <InstructionForm gas-name="pcmpestrml" xmm-mode="SSE">
       <ISA id="SSE4.2"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -10251,7 +10251,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="pcmpestrm" xmm-mode="SSE">
+    <InstructionForm gas-name="pcmpestrml" xmm-mode="SSE">
       <ISA id="SSE4.2"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
@@ -47760,7 +47760,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VPCMPESTRI" summary="Packed Compare Explicit Length Strings, Return Index">
-    <InstructionForm gas-name="vpcmpestri" xmm-mode="AVX">
+    <InstructionForm gas-name="vpcmpestril" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -47775,7 +47775,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vpcmpestri" xmm-mode="AVX">
+    <InstructionForm gas-name="vpcmpestril" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
@@ -47792,7 +47792,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VPCMPESTRM" summary="Packed Compare Explicit Length Strings, Return Mask">
-    <InstructionForm gas-name="vpcmpestrm" xmm-mode="AVX">
+    <InstructionForm gas-name="vpcmpestrml" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -47807,7 +47807,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vpcmpestrm" xmm-mode="AVX">
+    <InstructionForm gas-name="vpcmpestrml" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>

@@ -13591,17 +13591,17 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="PCMPESTRI" summary="Packed Compare Explicit Length Strings, Return Index">
-    <InstructionForm gas-name="pcmpestri" xmm-mode="SSE" nacl-version="33">
+    <InstructionForm gas-name="pcmpestriq" xmm-mode="SSE" nacl-version="33">
       <ISA id="SSE4.2"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="imm8"/>
-      <ImplicitOperand id="eax" input="true" output="false"/>
+      <ImplicitOperand id="rax" input="true" output="false"/>
       <ImplicitOperand id="ecx" input="false" output="true"/>
-      <ImplicitOperand id="edx" input="true" output="false"/>
+      <ImplicitOperand id="rdx" input="true" output="false"/>
       <Encoding>
         <Prefix byte="66" mandatory="true"/>
-        <REX mandatory="false" W="0" R="#0" B="#1"/>
+        <REX mandatory="true" W="1" R="#0" B="#1"/>
         <Opcode byte="0F"/>
         <Opcode byte="3A"/>
         <Opcode byte="61"/>
@@ -13609,17 +13609,17 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="pcmpestri" xmm-mode="SSE" nacl-version="33">
+    <InstructionForm gas-name="pcmpestriq" xmm-mode="SSE" nacl-version="33">
       <ISA id="SSE4.2"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
       <Operand type="imm8"/>
-      <ImplicitOperand id="eax" input="true" output="false"/>
+      <ImplicitOperand id="rax" input="true" output="false"/>
       <ImplicitOperand id="ecx" input="false" output="true"/>
-      <ImplicitOperand id="edx" input="true" output="false"/>
+      <ImplicitOperand id="rdx" input="true" output="false"/>
       <Encoding>
         <Prefix byte="66" mandatory="true"/>
-        <REX mandatory="false" W="0" R="#0" B="#1" X="#1"/>
+        <REX mandatory="true" W="1" R="#0" B="#1" X="#1"/>
         <Opcode byte="0F"/>
         <Opcode byte="3A"/>
         <Opcode byte="61"/>
@@ -13629,17 +13629,17 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="PCMPESTRM" summary="Packed Compare Explicit Length Strings, Return Mask">
-    <InstructionForm gas-name="pcmpestrm" xmm-mode="SSE" nacl-version="33">
+    <InstructionForm gas-name="pcmpestrmq" xmm-mode="SSE" nacl-version="33">
       <ISA id="SSE4.2"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="imm8"/>
-      <ImplicitOperand id="eax" input="true" output="false"/>
-      <ImplicitOperand id="edx" input="true" output="false"/>
+      <ImplicitOperand id="rax" input="true" output="false"/>
+      <ImplicitOperand id="rdx" input="true" output="false"/>
       <ImplicitOperand id="xmm0" input="false" output="true"/>
       <Encoding>
         <Prefix byte="66" mandatory="true"/>
-        <REX mandatory="false" W="0" R="#0" B="#1"/>
+        <REX mandatory="true" W="1" R="#0" B="#1"/>
         <Opcode byte="0F"/>
         <Opcode byte="3A"/>
         <Opcode byte="60"/>
@@ -13647,17 +13647,17 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="pcmpestrm" xmm-mode="SSE" nacl-version="33">
+    <InstructionForm gas-name="pcmpestrmq" xmm-mode="SSE" nacl-version="33">
       <ISA id="SSE4.2"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
       <Operand type="imm8"/>
-      <ImplicitOperand id="eax" input="true" output="false"/>
-      <ImplicitOperand id="edx" input="true" output="false"/>
+      <ImplicitOperand id="rax" input="true" output="false"/>
+      <ImplicitOperand id="rdx" input="true" output="false"/>
       <ImplicitOperand id="xmm0" input="false" output="true"/>
       <Encoding>
         <Prefix byte="66" mandatory="true"/>
-        <REX mandatory="false" W="0" R="#0" B="#1" X="#1"/>
+        <REX mandatory="true" W="1" R="#0" B="#1" X="#1"/>
         <Opcode byte="0F"/>
         <Opcode byte="3A"/>
         <Opcode byte="60"/>
@@ -53643,31 +53643,31 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VPCMPESTRI" summary="Packed Compare Explicit Length Strings, Return Index">
-    <InstructionForm gas-name="vpcmpestri" xmm-mode="AVX" nacl-version="41">
+    <InstructionForm gas-name="vpcmpestriq" xmm-mode="AVX" nacl-version="41">
       <ISA id="AVX"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="imm8"/>
-      <ImplicitOperand id="eax" input="true" output="false"/>
+      <ImplicitOperand id="rax" input="true" output="false"/>
       <ImplicitOperand id="ecx" input="false" output="true"/>
-      <ImplicitOperand id="edx" input="true" output="false"/>
+      <ImplicitOperand id="rdx" input="true" output="false"/>
       <Encoding>
-        <VEX type="VEX" L="0" m-mmmm="00011" pp="01" R="#0" B="#1" vvvv="0000"/>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00011" pp="01" R="#0" B="#1" vvvv="0000"/>
         <Opcode byte="61"/>
         <ModRM mode="11" reg="#0" rm="#1"/>
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vpcmpestri" xmm-mode="AVX" nacl-version="41">
+    <InstructionForm gas-name="vpcmpestriq" xmm-mode="AVX" nacl-version="41">
       <ISA id="AVX"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
       <Operand type="imm8"/>
-      <ImplicitOperand id="eax" input="true" output="false"/>
+      <ImplicitOperand id="rax" input="true" output="false"/>
       <ImplicitOperand id="ecx" input="false" output="true"/>
-      <ImplicitOperand id="edx" input="true" output="false"/>
+      <ImplicitOperand id="rdx" input="true" output="false"/>
       <Encoding>
-        <VEX type="VEX" L="0" m-mmmm="00011" pp="01" R="#0" B="#1" X="#1" vvvv="0000"/>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00011" pp="01" R="#0" B="#1" X="#1" vvvv="0000"/>
         <Opcode byte="61"/>
         <ModRM mode="#1" reg="#0" rm="#1"/>
         <Immediate size="1" value="#2"/>
@@ -53675,31 +53675,31 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VPCMPESTRM" summary="Packed Compare Explicit Length Strings, Return Mask">
-    <InstructionForm gas-name="vpcmpestrm" xmm-mode="AVX" nacl-version="41">
+    <InstructionForm gas-name="vpcmpestrmq" xmm-mode="AVX" nacl-version="41">
       <ISA id="AVX"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="imm8"/>
-      <ImplicitOperand id="eax" input="true" output="false"/>
-      <ImplicitOperand id="edx" input="true" output="false"/>
+      <ImplicitOperand id="rax" input="true" output="false"/>
+      <ImplicitOperand id="rdx" input="true" output="false"/>
       <ImplicitOperand id="xmm0" input="false" output="true"/>
       <Encoding>
-        <VEX type="VEX" L="0" m-mmmm="00011" pp="01" R="#0" B="#1" vvvv="0000"/>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00011" pp="01" R="#0" B="#1" vvvv="0000"/>
         <Opcode byte="60"/>
         <ModRM mode="11" reg="#0" rm="#1"/>
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vpcmpestrm" xmm-mode="AVX" nacl-version="41">
+    <InstructionForm gas-name="vpcmpestrmq" xmm-mode="AVX" nacl-version="41">
       <ISA id="AVX"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="m128" input="true" output="false"/>
       <Operand type="imm8"/>
-      <ImplicitOperand id="eax" input="true" output="false"/>
-      <ImplicitOperand id="edx" input="true" output="false"/>
+      <ImplicitOperand id="rax" input="true" output="false"/>
+      <ImplicitOperand id="rdx" input="true" output="false"/>
       <ImplicitOperand id="xmm0" input="false" output="true"/>
       <Encoding>
-        <VEX type="VEX" L="0" m-mmmm="00011" pp="01" R="#0" B="#1" X="#1" vvvv="0000"/>
+        <VEX type="VEX" W="1" L="0" m-mmmm="00011" pp="01" R="#0" B="#1" X="#1" vvvv="0000"/>
         <Opcode byte="60"/>
         <ModRM mode="#1" reg="#0" rm="#1"/>
         <Immediate size="1" value="#2"/>
