@@ -21681,7 +21681,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTDQ2PH" summary="Convert Packed Dword Integers to Packed Half-Precision FP Values">
-    <InstructionForm gas-name="vcvtdq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtdq2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -21692,7 +21692,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtdq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtdq2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -21713,7 +21713,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtdq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtdq2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -21724,7 +21724,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtdq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtdq2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22015,7 +22015,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTNEPS2BF16" summary="Convert with Nearest-Even rounding a Single-Precision FP vector into a BFloat16 FP vector">
-    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtneps2bf16x" xmm-mode="AVX">
       <ISA id="AVX512-BF16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22026,7 +22026,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtneps2bf16y" xmm-mode="AVX">
       <ISA id="AVX512-BF16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22047,7 +22047,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtneps2bf16x" xmm-mode="AVX">
       <ISA id="AVX512-BF16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22058,7 +22058,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtneps2bf16y" xmm-mode="AVX">
       <ISA id="AVX512-BF16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22079,7 +22079,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtneps2bf16x" xmm-mode="AVX">
       <ISA id="AVX-NE-CONVERT"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -22089,7 +22089,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtneps2bf16y" xmm-mode="AVX">
       <ISA id="AVX-NE-CONVERT"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
@@ -22099,7 +22099,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtneps2bf16x" xmm-mode="AVX">
       <ISA id="AVX-NE-CONVERT"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m128" input="true" output="false"/>
@@ -22109,7 +22109,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtneps2bf16" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtneps2bf16y" xmm-mode="AVX">
       <ISA id="AVX-NE-CONVERT"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m256" input="true" output="false"/>
@@ -22121,7 +22121,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTPD2DQ" summary="Convert Packed Double-Precision FP Values to Packed Dword Integers">
-    <InstructionForm gas-name="vcvtpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2dqx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22132,7 +22132,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2dqy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22153,7 +22153,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2dqx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22164,7 +22164,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2dqy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22175,7 +22175,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2dqx" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -22185,7 +22185,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2dqy" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
@@ -22195,7 +22195,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2dqx" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m128" input="true" output="false"/>
@@ -22205,7 +22205,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2dqy" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m256" input="true" output="false"/>
@@ -22228,7 +22228,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTPD2PH" summary="Convert Packed Double-Precision FP Values to Packed Half-Precision FP Values">
-    <InstructionForm gas-name="vcvtpd2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22239,7 +22239,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22250,7 +22250,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2phz" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
       <Operand type="m512/m64bcst" input="true" output="false"/>
@@ -22260,7 +22260,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22271,7 +22271,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22282,7 +22282,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2phz" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
@@ -22295,7 +22295,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTPD2PS" summary="Convert Packed Double-Precision FP Values to Packed Single-Precision FP Values">
-    <InstructionForm gas-name="vcvtpd2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2psx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22306,7 +22306,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2psy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22327,7 +22327,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2psx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22338,7 +22338,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2psy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22349,7 +22349,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2psx" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -22359,7 +22359,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2psy" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
@@ -22369,7 +22369,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2psx" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m128" input="true" output="false"/>
@@ -22379,7 +22379,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2psy" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m256" input="true" output="false"/>
@@ -22469,7 +22469,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTPD2UDQ" summary="Convert Packed Double-Precision Floating-Point Values to Packed Unsigned Doubleword Integers">
-    <InstructionForm gas-name="vcvtpd2udq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2udqx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22480,7 +22480,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2udq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2udqy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22501,7 +22501,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2udq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2udqx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -22512,7 +22512,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtpd2udq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtpd2udqy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23585,7 +23585,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTPS2PHX" summary="Convert Single-Precision FP value to Half-Precision FP value">
-    <InstructionForm gas-name="vcvtps2phx" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtps2phxx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23596,7 +23596,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtps2phx" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtps2phxy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23617,7 +23617,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtps2phx" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtps2phxx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23628,7 +23628,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtps2phx" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtps2phxy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23920,7 +23920,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTQQ2PH" summary="Convert Packed Quadword Integers to Packed Half-Precision Floating-Point Values">
-    <InstructionForm gas-name="vcvtqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23931,7 +23931,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23942,7 +23942,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2phz" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
       <Operand type="m512/m64bcst" input="true" output="false"/>
@@ -23952,7 +23952,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23963,7 +23963,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23974,7 +23974,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2phz" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
@@ -23987,7 +23987,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTQQ2PS" summary="Convert Packed Quadword Integers to Packed Single-Precision Floating-Point Values">
-    <InstructionForm gas-name="vcvtqq2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2psx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -23998,7 +23998,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtqq2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2psy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24019,7 +24019,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtqq2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2psx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24030,7 +24030,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtqq2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtqq2psy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24334,7 +24334,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTSI2SH" summary="Convert Dword Integer to Scalar Half-Precision FP Value">
-    <InstructionForm gas-name="vcvtsi2sh" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2shl" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24345,7 +24345,7 @@
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtsi2sh" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtsi2shl" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24544,7 +24544,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTTPD2DQ" summary="Convert with Truncation Packed Double-Precision FP Values to Packed Dword Integers">
-    <InstructionForm gas-name="vcvttpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2dqx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24555,7 +24555,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2dqy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24576,7 +24576,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2dqx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24587,7 +24587,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2dqy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24598,7 +24598,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2dqx" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -24608,7 +24608,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2dqy" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
@@ -24618,7 +24618,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2dqx" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m128" input="true" output="false"/>
@@ -24628,7 +24628,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2dq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2dqy" xmm-mode="AVX">
       <ISA id="AVX"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="m256" input="true" output="false"/>
@@ -24718,7 +24718,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTTPD2UDQ" summary="Convert with Truncation Packed Double-Precision Floating-Point Values to Packed Unsigned Doubleword Integers">
-    <InstructionForm gas-name="vcvttpd2udq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2udqx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24729,7 +24729,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2udq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2udqy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24750,7 +24750,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2udq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2udqx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -24761,7 +24761,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvttpd2udq" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvttpd2udqy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -25806,7 +25806,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTUDQ2PH" summary="Convert Packed Unsigned Doubleword Integers to Packed Half-Precision Floating-Point Values">
-    <InstructionForm gas-name="vcvtudq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtudq2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -25817,7 +25817,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtudq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtudq2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -25838,7 +25838,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtudq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtudq2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -25849,7 +25849,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtudq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtudq2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -26007,7 +26007,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTUQQ2PH" summary="Convert Packed Unsigned Quadword Integers to Packed Half-Precision Floating-Point Values">
-    <InstructionForm gas-name="vcvtuqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -26018,7 +26018,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtuqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -26029,7 +26029,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtuqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2phz" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
       <Operand type="m512/m64bcst" input="true" output="false"/>
@@ -26039,7 +26039,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtuqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2phx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -26050,7 +26050,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtuqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2phy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -26061,7 +26061,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtuqq2ph" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2phz" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
@@ -26074,7 +26074,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTUQQ2PS" summary="Convert Packed Unsigned Quadword Integers to Packed Single-Precision Floating-Point Values">
-    <InstructionForm gas-name="vcvtuqq2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2psx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -26085,7 +26085,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtuqq2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2psy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -26106,7 +26106,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtuqq2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2psx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -26117,7 +26117,7 @@
         <ModRM mode="11" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtuqq2ps" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtuqq2psy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="xmm{k}{z}" input="false" output="true"/>
@@ -26165,7 +26165,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTUSI2SH" summary="Convert Unsigned Integer to Scalar Half-Precision Floating-Point Value">
-    <InstructionForm gas-name="vcvtusi2sh" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtusi2shl" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -26176,7 +26176,7 @@
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtusi2sh" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtusi2shl" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -26190,7 +26190,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VCVTUSI2SS" summary="Convert Unsigned Integer to Scalar Single-Precision Floating-Point Value">
-    <InstructionForm gas-name="vcvtusi2ss" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtusi2ssl" xmm-mode="AVX">
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -26201,7 +26201,7 @@
         <ModRM mode="#2" reg="#0" rm="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vcvtusi2ss" xmm-mode="AVX">
+    <InstructionForm gas-name="vcvtusi2ssl" xmm-mode="AVX">
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
@@ -36505,7 +36505,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VFPCLASSPD" summary="Test Class of Packed Double-Precision Floating-Point Values">
-    <InstructionForm gas-name="vfpclasspd" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspdx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36518,7 +36518,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclasspd" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspdy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36531,7 +36531,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclasspd" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspdz" xmm-mode="AVX">
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
       <Operand type="m512/m64bcst" input="true" output="false"/>
@@ -36543,7 +36543,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclasspd" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspdx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36556,7 +36556,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclasspd" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspdy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36569,7 +36569,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclasspd" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspdz" xmm-mode="AVX">
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
@@ -36583,7 +36583,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VFPCLASSPH" summary="Test Class of Packed Half-Precision Floating-Point Values">
-    <InstructionForm gas-name="vfpclassph" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclassphx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36596,7 +36596,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassph" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclassphy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36609,7 +36609,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassph" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclassphz" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="k{k}" input="false" output="true"/>
       <Operand type="m512/m16bcst" input="true" output="false"/>
@@ -36621,7 +36621,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassph" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclassphx" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36634,7 +36634,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassph" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclassphy" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <ISA id="AVX512VL"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36647,7 +36647,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassph" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclassphz" xmm-mode="AVX">
       <ISA id="AVX512-FP16"/>
       <Operand type="k{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
@@ -36661,7 +36661,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="VFPCLASSPS" summary="Test Class of Packed Single-Precision Floating-Point Values">
-    <InstructionForm gas-name="vfpclassps" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspsx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36674,7 +36674,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassps" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspsy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36687,7 +36687,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassps" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspsz" xmm-mode="AVX">
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
       <Operand type="m512/m32bcst" input="true" output="false"/>
@@ -36699,7 +36699,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassps" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspsx" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36712,7 +36712,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassps" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspsy" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
@@ -36725,7 +36725,7 @@
         <Immediate size="1" value="#2"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="vfpclassps" xmm-mode="AVX">
+    <InstructionForm gas-name="vfpclasspsz" xmm-mode="AVX">
       <ISA id="AVX512DQ"/>
       <Operand type="k{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
