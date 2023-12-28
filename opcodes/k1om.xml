@@ -3718,7 +3718,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="movabs">
+    <InstructionForm gas-name="movabsl">
       <Operand type="eax" input="false" output="true"/>
       <Operand type="moffs32"/>
       <Encoding>
@@ -3764,7 +3764,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="movabs">
+    <InstructionForm gas-name="movabsq">
       <Operand type="rax" input="false" output="true"/>
       <Operand type="moffs64"/>
       <Encoding>
@@ -3783,7 +3783,7 @@
         <Immediate size="4" value="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="movq">
+    <InstructionForm gas-name="movabsq">
       <Operand type="r64" input="false" output="true"/>
       <Operand type="imm64"/>
       <Encoding>
@@ -3893,7 +3893,7 @@
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="movabs">
+    <InstructionForm gas-name="movabsl">
       <Operand type="moffs32"/>
       <Operand type="eax" input="true" output="false"/>
       <Encoding>
@@ -3901,7 +3901,7 @@
         <DataOffset size="4" value="#0"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="movabs">
+    <InstructionForm gas-name="movabsq">
       <Operand type="moffs64"/>
       <Operand type="rax" input="true" output="false"/>
       <Encoding>
