@@ -7356,7 +7356,7 @@
         <ModRM mode="#1" reg="#0" rm="#1"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="movabs">
+    <InstructionForm gas-name="movabsl">
       <Operand type="eax" input="false" output="true"/>
       <Operand type="moffs32"/>
       <Encoding>
@@ -7450,7 +7450,7 @@
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="movabs">
+    <InstructionForm gas-name="movabsl">
       <Operand type="moffs32"/>
       <Operand type="eax" input="true" output="false"/>
       <Encoding>
