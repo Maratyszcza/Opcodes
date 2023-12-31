@@ -24350,12 +24350,12 @@
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
-      <Operand type="r32" input="true" output="false"/>
       <Operand type="{er}"/>
+      <Operand type="r32" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="101" pp="10" LL="#3" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="#3" aaa="000" z="0"/>
+        <EVEX mmm="101" pp="10" LL="#2" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="000" z="0"/>
         <Opcode byte="2A"/>
-        <ModRM mode="11" reg="#0" rm="#2"/>
+        <ModRM mode="11" reg="#0" rm="#3"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
@@ -24397,12 +24397,12 @@
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
-      <Operand type="r32" input="true" output="false"/>
       <Operand type="{er}"/>
+      <Operand type="r32" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="10" LL="#3" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="#3" aaa="000" z="0"/>
+        <EVEX mmm="001" pp="10" LL="#2" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="000" z="0"/>
         <Opcode byte="2A"/>
-        <ModRM mode="11" reg="#0" rm="#2"/>
+        <ModRM mode="11" reg="#0" rm="#3"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
@@ -26181,12 +26181,12 @@
       <ISA id="AVX512-FP16"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
-      <Operand type="r32" input="true" output="false"/>
       <Operand type="{er}"/>
+      <Operand type="r32" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="101" pp="10" LL="#3" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="#3" aaa="000" z="0"/>
+        <EVEX mmm="101" pp="10" LL="#2" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="000" z="0"/>
         <Opcode byte="7B"/>
-        <ModRM mode="11" reg="#0" rm="#2"/>
+        <ModRM mode="11" reg="#0" rm="#3"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
@@ -26206,12 +26206,12 @@
       <ISA id="AVX512F"/>
       <Operand type="xmm" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
-      <Operand type="r32" input="true" output="false"/>
       <Operand type="{er}"/>
+      <Operand type="r32" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="10" LL="#3" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="#3" aaa="000" z="0"/>
+        <EVEX mmm="001" pp="10" LL="#2" W="0" vvvv="#1" V="0" RR="00" B="0" X="0" b="#2" aaa="000" z="0"/>
         <Opcode byte="7B"/>
-        <ModRM mode="11" reg="#0" rm="#2"/>
+        <ModRM mode="11" reg="#0" rm="#3"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
