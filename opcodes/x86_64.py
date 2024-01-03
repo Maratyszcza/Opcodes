@@ -220,26 +220,17 @@ class Operand:
         "m16{k}"
             A 16-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
 
-        "m16{k}{z}"
-            A 16-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
-
         "m32"
             A 32-bit memory operand.
 
         "m32{k}"
             A 32-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
 
-        "m32{k}{z}"
-            A 32-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
-
         "m64"
             A 64-bit memory operand.
 
         "m64{k}"
             A 64-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
-
-        "m64{k}{z}"
-            A 64-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "m80"
             An 80-bit memory operand.
@@ -250,26 +241,17 @@ class Operand:
         "m128{k}"
             A 128-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
 
-        "m128{k}{z}"
-            A 128-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
-
         "m256"
             A 256-bit memory operand.
 
         "m256{k}"
             A 256-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
 
-        "m256{k}{z}"
-            A 256-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
-
         "m512"
             A 512-bit memory operand.
 
         "m512{k}"
             A 512-bit memory operand, optionally masked by an AVX-512 mask register (k1-k7).
-
-        "m512{k}{z}"
-            A 512-bit memory operand, optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "m32/m16bcst"
             A 32-bit memory operand or a 16-bit memory operand broadcasted to 32 bits {1to2}.

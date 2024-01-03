@@ -26735,10 +26735,10 @@
     <InstructionForm gas-name="vcompresspd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="8A"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -26757,10 +26757,10 @@
     <InstructionForm gas-name="vcompresspd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="8A"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -26777,10 +26777,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vcompresspd" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="8A"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -26801,10 +26801,10 @@
     <InstructionForm gas-name="vcompressps" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="01" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="8A"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -26823,10 +26823,10 @@
     <InstructionForm gas-name="vcompressps" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="8A"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -26843,10 +26843,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vcompressps" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="8A"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -28752,11 +28752,11 @@
     <InstructionForm gas-name="vcvtps2ph" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="011" pp="01" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="1D"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -28778,11 +28778,11 @@
     <InstructionForm gas-name="vcvtps2ph" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="011" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="1D"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -28790,11 +28790,11 @@
     </InstructionForm>
     <InstructionForm gas-name="vcvtps2ph" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="1D"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33023,11 +33023,11 @@
     <InstructionForm gas-name="vextractf32x4" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="011" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="19"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33047,11 +33047,11 @@
     </InstructionForm>
     <InstructionForm gas-name="vextractf32x4" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="19"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33073,11 +33073,11 @@
     </InstructionForm>
     <InstructionForm gas-name="vextractf32x8" xmm-mode="AVX">
       <ISA id="AVX512DQ"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="1B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33101,11 +33101,11 @@
     <InstructionForm gas-name="vextractf64x2" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="011" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="19"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33125,11 +33125,11 @@
     </InstructionForm>
     <InstructionForm gas-name="vextractf64x2" xmm-mode="AVX">
       <ISA id="AVX512DQ"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="011" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="19"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33151,11 +33151,11 @@
     </InstructionForm>
     <InstructionForm gas-name="vextractf64x4" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="011" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="1B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33205,11 +33205,11 @@
     <InstructionForm gas-name="vextracti32x4" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="011" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="39"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33229,11 +33229,11 @@
     </InstructionForm>
     <InstructionForm gas-name="vextracti32x4" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="39"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33255,11 +33255,11 @@
     </InstructionForm>
     <InstructionForm gas-name="vextracti32x8" xmm-mode="AVX">
       <ISA id="AVX512DQ"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="011" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="3B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33283,11 +33283,11 @@
     <InstructionForm gas-name="vextracti64x2" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512DQ"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="011" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="39"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33307,11 +33307,11 @@
     </InstructionForm>
     <InstructionForm gas-name="vextracti64x2" xmm-mode="AVX">
       <ISA id="AVX512DQ"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="011" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="39"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -33333,11 +33333,11 @@
     </InstructionForm>
     <InstructionForm gas-name="vextracti64x4" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Operand type="imm8"/>
       <Encoding>
-        <EVEX mmm="011" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="011" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="3B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
         <Immediate size="1" value="#2"/>
@@ -45678,10 +45678,10 @@
     <InstructionForm gas-name="vmovapd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="29"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -45705,10 +45705,10 @@
     <InstructionForm gas-name="vmovapd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="29"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -45731,10 +45731,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovapd" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="29"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -45861,10 +45861,10 @@
     <InstructionForm gas-name="vmovaps" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="00" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="00" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="29"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -45888,10 +45888,10 @@
     <InstructionForm gas-name="vmovaps" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="00" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="00" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="29"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -45914,10 +45914,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovaps" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="00" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="00" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="29"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46304,10 +46304,10 @@
     <InstructionForm gas-name="vmovdqa32" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="01" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46331,10 +46331,10 @@
     <InstructionForm gas-name="vmovdqa32" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46357,10 +46357,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovdqa32" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46417,10 +46417,10 @@
     <InstructionForm gas-name="vmovdqa64" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46444,10 +46444,10 @@
     <InstructionForm gas-name="vmovdqa64" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46470,10 +46470,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovdqa64" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46602,10 +46602,10 @@
     <InstructionForm gas-name="vmovdqu16" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="11" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="11" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46629,10 +46629,10 @@
     <InstructionForm gas-name="vmovdqu16" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="11" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="11" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46655,10 +46655,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovdqu16" xmm-mode="AVX">
       <ISA id="AVX512BW"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="11" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="11" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46715,10 +46715,10 @@
     <InstructionForm gas-name="vmovdqu32" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46742,10 +46742,10 @@
     <InstructionForm gas-name="vmovdqu32" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46768,10 +46768,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovdqu32" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46828,10 +46828,10 @@
     <InstructionForm gas-name="vmovdqu64" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="10" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="10" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46855,10 +46855,10 @@
     <InstructionForm gas-name="vmovdqu64" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="10" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="10" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46881,10 +46881,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovdqu64" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="10" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="10" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46941,10 +46941,10 @@
     <InstructionForm gas-name="vmovdqu8" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="11" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="11" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46968,10 +46968,10 @@
     <InstructionForm gas-name="vmovdqu8" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="11" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="11" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -46994,10 +46994,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovdqu8" xmm-mode="AVX">
       <ISA id="AVX512BW"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="11" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="11" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="7F"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -48069,10 +48069,10 @@
     <InstructionForm gas-name="vmovupd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="11"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -48096,10 +48096,10 @@
     <InstructionForm gas-name="vmovupd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="11"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -48122,10 +48122,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovupd" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="11"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -48252,10 +48252,10 @@
     <InstructionForm gas-name="vmovups" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="00" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="001" pp="00" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="11"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -48279,10 +48279,10 @@
     <InstructionForm gas-name="vmovups" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="00" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="001" pp="00" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="11"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -48305,10 +48305,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vmovups" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="001" pp="00" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="64"/>
+        <EVEX mmm="001" pp="00" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="64"/>
         <Opcode byte="11"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -54868,10 +54868,10 @@
     <InstructionForm gas-name="vpcompressd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="01" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="8B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -54890,10 +54890,10 @@
     <InstructionForm gas-name="vpcompressd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="01" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="8B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -54910,10 +54910,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpcompressd" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="01" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="8B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -54934,10 +54934,10 @@
     <InstructionForm gas-name="vpcompressq" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="01" LL="00" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="8B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -54956,10 +54956,10 @@
     <InstructionForm gas-name="vpcompressq" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="01" LL="01" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="8B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -54976,10 +54976,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpcompressq" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m512{k}{z}" input="false" output="true"/>
+      <Operand type="m512{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="01" LL="10" W="1" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="8B"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -62822,10 +62822,10 @@
     <InstructionForm gas-name="vpmovdb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m32{k}{z}" input="false" output="true"/>
+      <Operand type="m32{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="31"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -62844,10 +62844,10 @@
     <InstructionForm gas-name="vpmovdb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="31"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -62864,10 +62864,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovdb" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="31"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -62888,10 +62888,10 @@
     <InstructionForm gas-name="vpmovdw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="33"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -62910,10 +62910,10 @@
     <InstructionForm gas-name="vpmovdw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="33"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -62930,10 +62930,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovdw" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="33"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63146,10 +63146,10 @@
     <InstructionForm gas-name="vpmovqb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m16{k}{z}" input="false" output="true"/>
+      <Operand type="m16{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="2"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="2"/>
         <Opcode byte="32"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63168,10 +63168,10 @@
     <InstructionForm gas-name="vpmovqb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m32{k}{z}" input="false" output="true"/>
+      <Operand type="m32{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="32"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63188,10 +63188,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovqb" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="32"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63212,10 +63212,10 @@
     <InstructionForm gas-name="vpmovqd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="35"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63234,10 +63234,10 @@
     <InstructionForm gas-name="vpmovqd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="35"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63254,10 +63254,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovqd" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="35"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63278,10 +63278,10 @@
     <InstructionForm gas-name="vpmovqw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m32{k}{z}" input="false" output="true"/>
+      <Operand type="m32{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="34"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63300,10 +63300,10 @@
     <InstructionForm gas-name="vpmovqw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="34"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63320,10 +63320,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovqw" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="34"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63344,10 +63344,10 @@
     <InstructionForm gas-name="vpmovsdb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m32{k}{z}" input="false" output="true"/>
+      <Operand type="m32{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="21"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63366,10 +63366,10 @@
     <InstructionForm gas-name="vpmovsdb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="21"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63386,10 +63386,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovsdb" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="21"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63410,10 +63410,10 @@
     <InstructionForm gas-name="vpmovsdw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="23"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63432,10 +63432,10 @@
     <InstructionForm gas-name="vpmovsdw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="23"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63452,10 +63452,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovsdw" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="23"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63476,10 +63476,10 @@
     <InstructionForm gas-name="vpmovsqb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m16{k}{z}" input="false" output="true"/>
+      <Operand type="m16{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="2"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="2"/>
         <Opcode byte="22"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63498,10 +63498,10 @@
     <InstructionForm gas-name="vpmovsqb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m32{k}{z}" input="false" output="true"/>
+      <Operand type="m32{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="22"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63518,10 +63518,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovsqb" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="22"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63542,10 +63542,10 @@
     <InstructionForm gas-name="vpmovsqd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="25"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63564,10 +63564,10 @@
     <InstructionForm gas-name="vpmovsqd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="25"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63584,10 +63584,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovsqd" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="25"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63608,10 +63608,10 @@
     <InstructionForm gas-name="vpmovsqw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m32{k}{z}" input="false" output="true"/>
+      <Operand type="m32{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="24"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63630,10 +63630,10 @@
     <InstructionForm gas-name="vpmovsqw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="24"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63650,10 +63650,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovsqw" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="24"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63674,10 +63674,10 @@
     <InstructionForm gas-name="vpmovswb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="20"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63696,10 +63696,10 @@
     <InstructionForm gas-name="vpmovswb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="20"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -63716,10 +63716,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovswb" xmm-mode="AVX">
       <ISA id="AVX512BW"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="20"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64376,10 +64376,10 @@
     <InstructionForm gas-name="vpmovusdb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m32{k}{z}" input="false" output="true"/>
+      <Operand type="m32{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="11"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64398,10 +64398,10 @@
     <InstructionForm gas-name="vpmovusdb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="11"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64418,10 +64418,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovusdb" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="11"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64442,10 +64442,10 @@
     <InstructionForm gas-name="vpmovusdw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="13"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64464,10 +64464,10 @@
     <InstructionForm gas-name="vpmovusdw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="13"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64484,10 +64484,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovusdw" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="13"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64508,10 +64508,10 @@
     <InstructionForm gas-name="vpmovusqb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m16{k}{z}" input="false" output="true"/>
+      <Operand type="m16{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="2"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="2"/>
         <Opcode byte="12"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64530,10 +64530,10 @@
     <InstructionForm gas-name="vpmovusqb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m32{k}{z}" input="false" output="true"/>
+      <Operand type="m32{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="12"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64550,10 +64550,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovusqb" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="12"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64574,10 +64574,10 @@
     <InstructionForm gas-name="vpmovusqd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="15"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64596,10 +64596,10 @@
     <InstructionForm gas-name="vpmovusqd" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="15"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64616,10 +64616,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovusqd" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="15"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64640,10 +64640,10 @@
     <InstructionForm gas-name="vpmovusqw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m32{k}{z}" input="false" output="true"/>
+      <Operand type="m32{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="4"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="4"/>
         <Opcode byte="14"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64662,10 +64662,10 @@
     <InstructionForm gas-name="vpmovusqw" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512F"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="14"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64682,10 +64682,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovusqw" xmm-mode="AVX">
       <ISA id="AVX512F"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="14"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64706,10 +64706,10 @@
     <InstructionForm gas-name="vpmovuswb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="10"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64728,10 +64728,10 @@
     <InstructionForm gas-name="vpmovuswb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="10"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64748,10 +64748,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovuswb" xmm-mode="AVX">
       <ISA id="AVX512BW"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="10"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64806,10 +64806,10 @@
     <InstructionForm gas-name="vpmovwb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m64{k}{z}" input="false" output="true"/>
+      <Operand type="m64{k}" input="false" output="true"/>
       <Operand type="xmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="8"/>
+        <EVEX mmm="010" pp="10" LL="00" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="8"/>
         <Opcode byte="30"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64828,10 +64828,10 @@
     <InstructionForm gas-name="vpmovwb" xmm-mode="AVX">
       <ISA id="AVX512VL"/>
       <ISA id="AVX512BW"/>
-      <Operand type="m128{k}{z}" input="false" output="true"/>
+      <Operand type="m128{k}" input="false" output="true"/>
       <Operand type="ymm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="16"/>
+        <EVEX mmm="010" pp="10" LL="01" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="16"/>
         <Opcode byte="30"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
@@ -64848,10 +64848,10 @@
     </InstructionForm>
     <InstructionForm gas-name="vpmovwb" xmm-mode="AVX">
       <ISA id="AVX512BW"/>
-      <Operand type="m256{k}{z}" input="false" output="true"/>
+      <Operand type="m256{k}" input="false" output="true"/>
       <Operand type="zmm" input="true" output="false"/>
       <Encoding>
-        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="#0" disp8xN="32"/>
+        <EVEX mmm="010" pp="10" LL="10" W="0" vvvv="0000" V="0" RR="#1" B="#0" X="#0" b="0" aaa="#0" z="0" disp8xN="32"/>
         <Opcode byte="30"/>
         <ModRM mode="#0" reg="#1" rm="#0"/>
       </Encoding>
