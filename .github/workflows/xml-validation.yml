@@ -1,0 +1,38 @@
+name: XML Validation
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  x86:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install xmllint
+      run: sudo apt install -y libxml2-utils
+    - name: Validate x86.xml against x86.xsd schema
+      run: |
+        xmllint --schema opcodes/x86.xsd --noout opcodes/x86.xml
+
+  x86_64:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install xmllint
+      run: sudo apt install -y libxml2-utils
+    - name: Validate x86_64.xml against x86_64.xsd schema
+      run: |
+        xmllint --schema opcodes/x86_64.xsd --noout opcodes/x86_64.xml
+
+  k1om:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install xmllint
+      run: sudo apt install -y libxml2-utils
+    - name: Validate k1om.xml against k1om.xsd schema
+      run: |
+        xmllint --schema opcodes/k1om.xsd --noout opcodes/k1om.xml
