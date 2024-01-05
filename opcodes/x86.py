@@ -155,34 +155,34 @@ class Operand:
             A 128-bit XMM SIMD register (xmm0-xmm31).
 
         "xmm{k}"
-            A 128-bit XMM SIMD register (xmm0-xmm31), optionally merge-masked by an AVX-512 mask register (k1-k7).
+            A 128-bit XMM SIMD register (xmm0-xmm31) merge-masked by an AVX-512 mask register (k1-k7).
 
         "xmm{k}{z}"
-            A 128-bit XMM SIMD register (xmm0-xmm31), optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
+            A 128-bit XMM SIMD register (xmm0-xmm31) zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "ymm"
             A 256-bit YMM SIMD register (ymm0-ymm31).
 
         "ymm{k}"
-            A 256-bit YMM SIMD register (ymm0-ymm31), optionally merge-masked by an AVX-512 mask register (k1-k7).
+            A 256-bit YMM SIMD register (ymm0-ymm31) merge-masked by an AVX-512 mask register (k1-k7).
 
         "ymm{k}{z}"
-            A 256-bit YMM SIMD register (ymm0-ymm31), optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
+            A 256-bit YMM SIMD register (ymm0-ymm31) zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "zmm"
             A 512-bit ZMM SIMD register (zmm0-zmm31).
 
         "zmm{k}"
-            A 512-bit ZMM SIMD register (zmm0-zmm31), optionally merge-masked by an AVX-512 mask register (k1-k7).
+            A 512-bit ZMM SIMD register (zmm0-zmm31) merge-masked by an AVX-512 mask register (k1-k7).
 
         "zmm{k}{z}"
-            A 512-bit ZMM SIMD register (zmm0-zmm31), optionally zero- or merge-masked by an AVX-512 mask register (k1-k7).
+            A 512-bit ZMM SIMD register (zmm0-zmm31) zero- or merge-masked by an AVX-512 mask register (k1-k7).
 
         "k"
             An AVX-512 mask register (k0-k7).
 
         "k{k}"
-            An AVX-512 mask register (k0-k7), optionally merge-masked by an AVX-512 mask register (k1-k7).
+            An AVX-512 mask register (k0-k7) merge-masked by an AVX-512 mask register (k1-k7).
 
         "m"
             A memory operand of any size.
@@ -194,19 +194,19 @@ class Operand:
             A 16-bit memory operand.
 
         "m16{k}"
-            A 16-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
+            A 16-bit memory operand masked by an AVX-512 mask register (k1-k7).
 
         "m32"
             A 32-bit memory operand.
 
         "m32{k}"
-            A 32-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
+            A 32-bit memory operand masked by an AVX-512 mask register (k1-k7).
 
         "m64"
             A 64-bit memory operand.
 
         "m64{k}"
-            A 64-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
+            A 64-bit memory operand masked by an AVX-512 mask register (k1-k7).
 
         "m80"
             An 80-bit memory operand.
@@ -215,19 +215,19 @@ class Operand:
             A 128-bit memory operand.
 
         "m128{k}"
-            A 128-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
+            A 128-bit memory operand masked by an AVX-512 mask register (k1-k7).
 
         "m256"
             A 256-bit memory operand.
 
         "m256{k}"
-            A 256-bit memory operand, optionally merge-masked by an AVX-512 mask register (k1-k7).
+            A 256-bit memory operand masked by an AVX-512 mask register (k1-k7).
 
         "m512"
             A 512-bit memory operand.
 
         "m512{k}"
-            A 512-bit memory operand, optionally masked by an AVX-512 mask register (k1-k7).
+            A 512-bit memory operand masked by an AVX-512 mask register (k1-k7).
 
         "m32/m16bcst"
             A 32-bit memory operand or a 16-bit memory operand broadcasted to 32 bits {1to2}.
@@ -269,42 +269,42 @@ class Operand:
             A vector of memory addresses using VSIB with 32-bit indices in XMM register.
 
         "vm32x{k}"
-            A vector of memory addresses using VSIB with 32-bit indices in XMM register merge-masked by an AVX-512 mask
+            A vector of memory addresses using VSIB with 32-bit indices in XMM register masked by an AVX-512 mask
             register (k1-k7).
 
         "vm32y"
             A vector of memory addresses using VSIB with 32-bit indices in YMM register.
 
         "vm32y{k}"
-            A vector of memory addresses using VSIB with 32-bit indices in YMM register merge-masked by an AVX-512 mask
+            A vector of memory addresses using VSIB with 32-bit indices in YMM register masked by an AVX-512 mask
             register (k1-k7).
 
         "vm32z"
             A vector of memory addresses using VSIB with 32-bit indices in ZMM register.
 
         "vm32z{k}"
-            A vector of memory addresses using VSIB with 32-bit indices in ZMM register merge-masked by an AVX-512 mask
+            A vector of memory addresses using VSIB with 32-bit indices in ZMM register masked by an AVX-512 mask
             register (k1-k7).
 
         "vm64x"
             A vector of memory addresses using VSIB with 64-bit indices in XMM register.
 
         "vm64x{k}"
-            A vector of memory addresses using VSIB with 64-bit indices in XMM register merge-masked by an AVX-512 mask
+            A vector of memory addresses using VSIB with 64-bit indices in XMM register masked by an AVX-512 mask
             register (k1-k7).
 
         "vm64y"
             A vector of memory addresses using VSIB with 64-bit indices in YMM register.
 
         "vm64y{k}"
-            A vector of memory addresses using VSIB with 64-bit indices in YMM register merge-masked by an AVX-512 mask
+            A vector of memory addresses using VSIB with 64-bit indices in YMM register masked by an AVX-512 mask
             register (k1-k7).
 
         "vm64z"
             A vector of memory addresses using VSIB with 64-bit indices in ZMM register.
 
         "vm64z{k}"
-            A vector of memory addresses using VSIB with 64-bit indices in ZMM register merge-masked by an AVX-512 mask
+            A vector of memory addresses using VSIB with 64-bit indices in ZMM register masked by an AVX-512 mask
             register (k1-k7).
 
         "{sae}"
