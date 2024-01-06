@@ -1065,7 +1065,7 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="BSWAP" summary="Byte Swap">
-    <InstructionForm gas-name="bswapl">
+    <InstructionForm gas-name="bswap">
       <Operand type="r32" input="true" output="true"/>
       <Encoding>
         <REX mandatory="false" W="0" B="#0"/>
@@ -1073,7 +1073,7 @@
         <Opcode byte="C8" addend="#0"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="bswapq">
+    <InstructionForm gas-name="bswap">
       <Operand type="r64" input="true" output="true"/>
       <Encoding>
         <REX mandatory="true" W="1" B="#0"/>
