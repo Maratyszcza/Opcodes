@@ -407,6 +407,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="ISAExtension">
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="RDPMC" />
 			<xs:enumeration value="RDTSC" />
 			<xs:enumeration value="RDTSCP" />
 			<xs:enumeration value="CPUID" />
