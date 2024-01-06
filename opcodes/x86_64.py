@@ -393,7 +393,8 @@ class ISAExtension:
     _score_map = {
         # Quasi-system instructions
         'CPUID': 1,
-        'RDTSC': 5,
+        'RDTSC': 4,
+        'RDPMC': 5,
         'RDTSCP': 6,
         # General-purpose instructions
         'CMOV': 20,
@@ -475,6 +476,7 @@ class ISAExtension:
 
     :ivar name: name of the ISA extension. Possible values are:
 
+        - "RDPMC"            := The `RDPMC` instruction.
         - "RDTSC"            := The `RDTSC` instruction.
         - "RDTSCP"           := The `RDTSCP` instruction.
         - "CPUID"            := The `CPUID` instruction.
