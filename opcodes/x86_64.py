@@ -493,6 +493,7 @@ class ISAExtension:
         - "RDTSC"            := The `RDTSC` instruction.
         - "RDTSCP"           := The `RDTSCP` instruction.
         - "CPUID"            := The `CPUID` instruction.
+        - "FSGSBASE"         := The `RDFSBASE`, `RDGSBASE`, `WRFSBASE`, and `WRGSBASE` instructions.
         - "FEMMS"            := The `FEMMS` instruction.
         - "MOVBE"            := The `MOVBE` instruction.
         - "POPCNT"           := The `POPCNT` instruction.
