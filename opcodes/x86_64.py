@@ -145,6 +145,9 @@ class Operand:
         "rel32"
             A 32-bit signed offset relative to the address of instruction end.
 
+        "rel32m"
+            A 32-bit signed offset relative to the address of instruction end as a RIP-relative memory operand.
+
         "imm4"
             A 4-bit immediate value.
 

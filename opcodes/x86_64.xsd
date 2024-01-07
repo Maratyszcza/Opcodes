@@ -78,6 +78,7 @@
 			<xs:enumeration value="vm64z{k}" />
 			<xs:enumeration value="rel8" />
 			<xs:enumeration value="rel32" />
+			<xs:enumeration value="rel32m" />
 			<xs:enumeration value="{er}" />
 			<xs:enumeration value="{sae}" />
 		</xs:restriction>
