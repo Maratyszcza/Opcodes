@@ -12656,14 +12656,14 @@
     </InstructionForm>
   </Instruction>
   <Instruction name="XLATB" summary="Table Look-up Translation">
-    <InstructionForm gas-name="xlatb">
+    <InstructionForm gas-name="xlat">
       <ImplicitOperand id="al" input="true" output="true"/>
       <ImplicitOperand id="ebx" input="true" output="false"/>
       <Encoding>
         <Opcode byte="D7"/>
       </Encoding>
     </InstructionForm>
-    <InstructionForm gas-name="xlatb">
+    <InstructionForm gas-name="xlat">
       <ImplicitOperand id="al" input="true" output="true"/>
       <ImplicitOperand id="rbx" input="true" output="false"/>
       <Encoding>
