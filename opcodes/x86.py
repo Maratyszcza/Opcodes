@@ -467,6 +467,7 @@ class ISAExtension:
         - "CLWB"             := The `CLWB` instruction.
         - "CLZERO"           := The `CLZERO` instruction.
         - "CLDEMOTE"         := The `CLDEMOTE` instruction.
+        - "MCOMMIT"          := The `MCOMMIT` instruction.
         - "PREFETCH"         := The `PREFETCH` instruction (3dnow! Prefetch).
         - "PREFETCHW"        := The `PREFETCHW` instruction (3dnow! Prefetch/Intel PRFCHW).
         - "PREFETCHWT1"      := The `PREFETCHWT1` instruction.
