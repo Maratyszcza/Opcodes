@@ -475,6 +475,7 @@ class ISAExtension:
         'SM4': 127,
         # Security instructions
         'SERIALIZE': 130,
+        'CET-IBT': 131,
         # AMX instructions
         'AMX-TILE': 140,
         'AMX-INT8': 141,
@@ -573,6 +574,7 @@ class ISAExtension:
         - "SM3"              := `SM3` instruction set.
         - "SM4"              := `SM4` instruction set.
         - "SERIALIZE"        := The `SERIALIZE` instruction.
+        - "CET-IBT"          := The `ENDBR64` instruction and `NOTRACK` prefix for `CALL`/`JMP` instructions.
     """
 
     def __init__(self, name):
