@@ -507,6 +507,8 @@ class ISAExtension:
         - "CLZERO"           := The `CLZERO` instruction.
         - "CLDEMOTE"         := The `CLDEMOTE` instruction.
         - "MCOMMIT"          := The `MCOMMIT` instruction.
+        - "MOVDIRI"          := The `MOVDIRI` instruction.
+        - "MOVDIR64B"        := The `MOVDIR64B` instruction.
         - "PREFETCH"         := The `PREFETCH` instruction (3dnow! Prefetch).
         - "PREFETCHI"        := The `PREFETCHIT0`/`PREFETCHIT1` instructions.
         - "PREFETCHW"        := The `PREFETCHW` instruction (3dnow! Prefetch/Intel PRFCHW).

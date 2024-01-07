@@ -401,6 +401,8 @@
 			<xs:enumeration value="CLZERO" />
 			<xs:enumeration value="CLDEMOTE" />
 			<xs:enumeration value="MCOMMIT" />
+			<xs:enumeration value="MOVDIRI" />
+			<xs:enumeration value="MOVDIR64B" />
 			<xs:enumeration value="PREFETCH" />
 			<xs:enumeration value="PREFETCHW" />
 			<xs:enumeration value="PREFETCHWT1" />
