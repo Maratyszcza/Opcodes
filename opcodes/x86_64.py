@@ -494,6 +494,7 @@ class ISAExtension:
         - "RDTSC"            := The `RDTSC` instruction.
         - "RDTSCP"           := The `RDTSCP` instruction.
         - "CPUID"            := The `CPUID` instruction.
+        - "LAHFSAHF"         := The `LAHF` and `SAHF` instructions.
         - "FSGSBASE"         := The `RDFSBASE`, `RDGSBASE`, `WRFSBASE`, and `WRGSBASE` instructions.
         - "FEMMS"            := The `FEMMS` instruction.
         - "MOVBE"            := The `MOVBE` instruction.
