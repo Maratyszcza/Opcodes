@@ -460,6 +460,8 @@
 			<xs:enumeration value="BMI2" />
 			<xs:enumeration value="TBM" />
 			<xs:enumeration value="ADX" />
+			<xs:enumeration value="CMPXCHG8B" />
+			<xs:enumeration value="CMPXCHG16B" />
 			<xs:enumeration value="RAO-INT" />
 			<xs:enumeration value="CMPCCXADD" />
 			<xs:enumeration value="CLFLUSH" />

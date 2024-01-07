@@ -389,6 +389,7 @@
 			<xs:enumeration value="BMI2" />
 			<xs:enumeration value="TBM" />
 			<xs:enumeration value="ADX" />
+			<xs:enumeration value="CMPXCHG8B" />
 			<xs:enumeration value="RAO-INT" />
 			<xs:enumeration value="CLFLUSH" />
 			<xs:enumeration value="CLFLUSHOPT" />

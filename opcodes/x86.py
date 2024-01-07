@@ -383,7 +383,8 @@ class ISAExtension:
         'MONITORX': 31,
         'WAITPKG': 32,
         # Atomic instructions
-        'RAO-INT': 35,
+        'CMPXCHG8B': 35,
+        'RAO-INT': 36,
         # Instructions operating on MMX state
         'MMX': 40,
         'MMX+': 41,
@@ -478,6 +479,8 @@ class ISAExtension:
         - "MONITORX"         := The `MONITORX` and `MWAITX` instructions.
         - "WAITPKG"          := The `UMONITOR`, `UMWAIT`, and `TPAUSE` instructions.
         - "CMOV"             := Conditional MOVe instructions.
+        - "CMPXCHG8B"        := The `CMPXCHG8B` instruction.
+        - "RAO-INT"          := Remote Atomic Operations extension.
         - "MMX"              := MultiMedia eXtension.
         - "MMX+"             := AMD MMX+ extension / Integer SSE (Intel).
         - "3dnow!"           := AMD 3dnow! extension.

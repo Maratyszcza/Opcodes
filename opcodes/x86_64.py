@@ -415,8 +415,10 @@ class ISAExtension:
         'MONITORX': 31,
         'WAITPKG': 32,
         # Atomic instructions
-        'CMPCCXADD': 35,
-        'RAO-INT': 36,
+        'CMPXCHG8B': 35,
+        'CMPXCHG16B': 36,
+        'CMPCCXADD': 37,
+        'RAO-INT': 38,
         # Instructions operating on MMX state
         'MMX': 40,
         'MMX+': 41,
@@ -520,6 +522,8 @@ class ISAExtension:
         - "MONITORX"         := The `MONITORX` and `MWAITX` instructions.
         - "WAITPKG"          := The `UMONITOR`, `UMWAIT`, and `TPAUSE` instructions.
         - "CMOV"             := Conditional MOVe instructions.
+        - "CMPXCHG8B"        := The `CMPXCHG8B` instruction.
+        - "CMPXCHG16B"       := The `CMPXCHG16B` instruction.
         - "CMPCCXADD"        := Compare and Add instructions.
         - "RAO-INT"          := Remote Atomic Operations extension.
         - "MMX"              := MultiMedia eXtension.
