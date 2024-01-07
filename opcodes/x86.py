@@ -378,8 +378,12 @@ class ISAExtension:
         'BMI': 25,
         'BMI2': 26,
         'ADX': 27,
+        # Monitor/Wait instructions
+        'MONITOR': 30,
+        'MONITORX': 31,
+        'WAITPKG': 32,
         # Atomic instructions
-        'RAO-INT': 30,
+        'RAO-INT': 35,
         # Instructions operating on MMX state
         'MMX': 40,
         'MMX+': 41,
@@ -467,6 +471,7 @@ class ISAExtension:
         - "PREFETCHWT1"      := The `PREFETCHWT1` instruction.
         - "MONITOR"          := The `MONITOR` and `MWAIT` instructions.
         - "MONITORX"         := The `MONITORX` and `MWAITX` instructions.
+        - "WAITPKG"          := The `UMONITOR`, `UMWAIT`, and `TPAUSE` instructions.
         - "CMOV"             := Conditional MOVe instructions.
         - "MMX"              := MultiMedia eXtension.
         - "MMX+"             := AMD MMX+ extension / Integer SSE (Intel).
