@@ -396,6 +396,7 @@ class ISAExtension:
         'RDTSC': 4,
         'RDPMC': 5,
         'RDTSCP': 6,
+        'RDPID': 7,
         # General-purpose instructions
         'CMOV': 20,
         'MOVBE': 21,
@@ -477,6 +478,7 @@ class ISAExtension:
     :ivar name: name of the ISA extension. Possible values are:
 
         - "RDPMC"            := The `RDPMC` instruction.
+        - "RDPID"            := The `RDPID` instruction.
         - "RDTSC"            := The `RDTSC` instruction.
         - "RDTSCP"           := The `RDTSCP` instruction.
         - "CPUID"            := The `CPUID` instruction.
