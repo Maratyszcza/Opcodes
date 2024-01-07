@@ -463,6 +463,7 @@
 			<xs:enumeration value="CLFLUSHOPT" />
 			<xs:enumeration value="CLWB" />
 			<xs:enumeration value="CLZERO" />
+			<xs:enumeration value="CLDEMOTE" />
 			<xs:enumeration value="PREFETCH" />
 			<xs:enumeration value="PREFETCHI" />
 			<xs:enumeration value="PREFETCHW" />
