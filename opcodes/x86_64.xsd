@@ -414,6 +414,7 @@
 			<xs:enumeration value="RDPID" />
 			<xs:enumeration value="RDPRU" />
 			<xs:enumeration value="CPUID" />
+			<xs:enumeration value="SERIALIZE" />
 			<xs:enumeration value="CMOV" />
 			<xs:enumeration value="MMX" />
 			<xs:enumeration value="MMX+" />

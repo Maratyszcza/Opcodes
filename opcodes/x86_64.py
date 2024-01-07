@@ -469,12 +469,14 @@ class ISAExtension:
         'SHA512': 125,
         'SM3': 126,
         'SM4': 127,
+        # Security instructions
+        'SERIALIZE': 130,
         # AMX instructions
-        'AMX-TILE': 130,
-        'AMX-INT8': 131,
-        'AMX-BF16': 132,
-        'AMX-FP16': 133,
-        'AMX-COMPLEX': 134,
+        'AMX-TILE': 140,
+        'AMX-INT8': 141,
+        'AMX-BF16': 142,
+        'AMX-FP16': 143,
+        'AMX-COMPLEX': 144,
     }
 
     """An extension to x86-64 instruction set.
@@ -560,6 +562,7 @@ class ISAExtension:
         - "SHA512"           := `SHA512` instruction set.
         - "SM3"              := `SM3` instruction set.
         - "SM4"              := `SM4` instruction set.
+        - "SERIALIZE"        := The `SERIALIZE` instruction.
     """
 
     def __init__(self, name):
