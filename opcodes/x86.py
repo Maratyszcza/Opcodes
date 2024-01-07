@@ -436,6 +436,8 @@ class ISAExtension:
         'SHA512': 125,
         'SM3': 126,
         'SM4': 127,
+        # Security instructions
+        'SERIALIZE': 130,
     }
 
     """An extension to x86 instruction set.
@@ -513,6 +515,7 @@ class ISAExtension:
         - "SHA512"           := `SHA512` instruction set.
         - "SM3"              := `SM3` instruction set.
         - "SM4"              := `SM4` instruction set.
+        - "SERIALIZE"        := The `SERIALIZE` instruction.
     """
 
     def __init__(self, name):
