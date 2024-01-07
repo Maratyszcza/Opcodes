@@ -3576,6 +3576,13 @@
       </Encoding>
     </InstructionForm>
   </Instruction>
+  <Instruction name="LAHF" summary="Load AH from Flags">
+    <InstructionForm gas-name="lahf">
+      <Encoding>
+        <Opcode byte="9F"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
   <Instruction name="LDMXCSR" summary="Load MXCSR Register">
     <InstructionForm gas-name="ldmxcsr">
       <Operand type="m32" input="true" output="false"/>
@@ -5760,6 +5767,13 @@
         <REX mandatory="true" W="1" B="#0" X="#0"/>
         <Opcode byte="D3"/>
         <ModRM mode="#0" reg="1" rm="#0"/>
+      </Encoding>
+    </InstructionForm>
+  </Instruction>
+  <Instruction name="SAHF" summary="Store AH into Flags">
+    <InstructionForm gas-name="sahf">
+      <Encoding>
+        <Opcode byte="9E"/>
       </Encoding>
     </InstructionForm>
   </Instruction>
