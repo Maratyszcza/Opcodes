@@ -397,6 +397,7 @@ class ISAExtension:
         'RDPMC': 5,
         'RDTSCP': 6,
         'RDPID': 7,
+        'RDPRU': 8,
         # General-purpose instructions
         'CMOV': 20,
         'MOVBE': 21,
@@ -479,6 +480,7 @@ class ISAExtension:
 
         - "RDPMC"            := The `RDPMC` instruction.
         - "RDPID"            := The `RDPID` instruction.
+        - "RDPRU"            := The `RDPRU` instruction.
         - "RDTSC"            := The `RDTSC` instruction.
         - "RDTSCP"           := The `RDTSCP` instruction.
         - "CPUID"            := The `CPUID` instruction.
