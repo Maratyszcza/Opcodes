@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opcodes"
+authors = [
+    { name = "Marat Dukhan", email = "maratek@gmail.com" },
+]
+maintainers = [
+    { name = "Marat Dukhan" },
+]
+dynamic = ["version", "readme", "dependencies"]
+license = { file = "LICENSE", content-type = "text/plain" }
+description = "Database of Processor Instructions/Opcodes"
+requires-python = ">=3.7"
+keywords = ["assembly", "assembler", "asm", "opcodes", "x86", "x86-64", "isa", "cpu"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Assembly",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Assemblers",
+    "Topic :: Software Development :: Documentation"
+]
+scripts = { "bilibili-api-docs" = " bilibili_api.tools.opendocs.__main__:main", "ivitools" = "bilibili_api.tools.ivitools.__main__:main" }
+
+[tool.setuptools.dynamic]
+version = { attr = "opcodes.__version__" }
+readme = { file = ["README.md"], content-type = "text/markdown" }
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools]
+packages = [
+    "opcodes",
+]
+
+[tool.setuptools.package-data]
+"opcodes" = [
+    "x86.xml",
+    "x86_64.xml",
+    "k1om.xml"
+]
